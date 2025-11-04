@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Car, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import styles from './Header.module.css';
 import { navLinks } from '../../data/NavLinks';
 
@@ -35,9 +35,9 @@ export default function Header() {
             onClick={e => handleNavClick(e, '#hero')}
           >
             <div className={styles.logoIcon}>
-              <Car size={28} />
+              <img src="/assets/header_logo.svg" alt="OnDrive logo" />
             </div>
-            <span className={styles.logoText}>OnDrive USA</span>
+            <span className={styles.logoText}>OnDrive</span>
           </a>
 
           <nav
@@ -53,6 +53,10 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
+
+            <a href="tel:+380991112233" className={styles.phoneLink}>
+              +38 (111) 111-11-111
+            </a>
 
             <a
               href="#contact"

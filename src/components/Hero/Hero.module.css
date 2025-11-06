@@ -210,7 +210,7 @@
 
 .statNumber.bonus {
   background: linear-gradient(90deg, #ff6b00, #ffd500);
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
   animation: pulse-glow 2s infinite;
 }

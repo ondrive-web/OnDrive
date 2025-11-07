@@ -1,4 +1,4 @@
-import { ArrowRight, Car } from 'lucide-react';
+import { CircleArrowRight } from 'lucide-react';
 import styles from './Hero.module.css';
 
 export default function Hero({ onCTAClick }) {
@@ -12,28 +12,22 @@ export default function Hero({ onCTAClick }) {
 
       <div className="container">
         <div className={styles.content}>
-          <div className={styles.iconWrapper}>
-            <Car className={styles.icon} size={60} />
+          <div className={styles.hero_background_slider}>
+            {' '}
+            <h1 className={styles.title}>ON DRIVE</h1>
+            <p className={styles.subtitle}>
+              Ми прагнемо щоб після отримання авто Ви відчували не лише
+              задоволення від покупки, а й підтримку на кожному кілометрі
+              шляху.{' '}
+            </p>
           </div>
-
-          <h1 className={styles.title}>Партнерська програма</h1>
-
-          <p className={styles.subtitle}>
-            Ваш надійний партнер у пошуку та доставці авто з США
-          </p>
-
-          <p className={styles.description}>
-            Приєднуйтесь до нашої партнерської програми та отримуйте гарантовані
-            винагороди за кожного клієнта. Швидку доставку авто, професійний
-            сервіс, прозорі умови, вигідні бонуси, та багато іншого.
-          </p>
 
           <button
             onClick={onCTAClick}
             className={`btn btn-primary ${styles.ctaButton}`}
           >
             Прорахувати вартість
-            <ArrowRight size={20} />
+            <CircleArrowRight size={40} />
           </button>
 
           <div className={styles.stats}>

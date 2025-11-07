@@ -1,4 +1,6 @@
 import { CircleArrowRight } from 'lucide-react';
+import HeroSlider from './HeroSlider';
+
 import styles from './Hero.module.css';
 
 export default function Hero({ onCTAClick }) {
@@ -12,15 +14,7 @@ export default function Hero({ onCTAClick }) {
 
       <div className="container">
         <div className={styles.content}>
-          <div className={styles.hero_background_slider}>
-            {' '}
-            <h1 className={styles.title}>ON DRIVE</h1>
-            <p className={styles.subtitle}>
-              Ми прагнемо щоб після отримання авто Ви відчували не лише
-              задоволення від покупки, а й підтримку на кожному кілометрі
-              шляху.{' '}
-            </p>
-          </div>
+          <HeroSlider />
 
           <button
             onClick={onCTAClick}

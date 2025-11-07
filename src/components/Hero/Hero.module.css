@@ -7,6 +7,57 @@
   overflow: hidden;
   padding: var(--spacing-2xl) 0;
 }
+.hero_background_slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* каждый слайд — фон */
+.slide {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* слой с текстом поверх слайдера */
+.overlayContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+/* затемнение фона под текст */
+.hero_background_slider::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  z-index: 5;
+}
+
+/* текст */
+.title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
 
 
 .background {
@@ -16,9 +67,6 @@
   overflow: hidden;
 }
 
-.hero_background_slider {  
-  background-color: red;
-}
 
 .background::before {
   content: '';
@@ -27,8 +75,8 @@
   right: -10%;
   width: 60%;
   height: 60%;
-  background: url('https://content.homenetiol.com/2000292/2195320/0x0/b5ff2dfdfb484482a9051c87b406edab.jpg')
-    no-repeat center;
+  /* background: url('https://content.homenetiol.com/2000292/2195320/0x0/b5ff2dfdfb484482a9051c87b406edab.jpg')
+    no-repeat center; */
   background-size: contain;
   opacity: 0.08;
   transform: translateY(-50%) rotate(-5deg);
@@ -90,8 +138,8 @@
   left: -250px;
   width: 500px;
   height: 400px;
-  background: url('https://content.homenetiol.com/2000292/2134889/0x0/3cfa16c819cc4d54b5460cf98116ee55.jpg')
-    no-repeat center;
+  /* background: url('https://content.homenetiol.com/2000292/2134889/0x0/3cfa16c819cc4d54b5460cf98116ee55.jpg')
+    no-repeat center; */
   background-size: contain;
   opacity: 0.06;
   z-index: -1;
@@ -108,6 +156,46 @@
   background-clip: text;
   animation: fadeInUp 1s ease-out 0.2s both;
 }
+
+/* контейнер слайдера */
+.hero_background_slider {
+  position: relative;
+  width: 100%;
+  height: 420px; /* подогнать под дизайн */
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* слайд как фон */
+.slide {
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* если нужно кастомизировать навигацию/пагинацию */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: #fff;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  opacity: 0.8;
+}
+
+/* overlay (если захотите разместить поверх слайдера текст — пример) */
+.overlayContent {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
 
 .subtitle {
   font-size: clamp(1.25rem, 3vw, 1.75rem);
@@ -209,3 +297,4 @@
     transform: scale(1.1);
   }
 }
+

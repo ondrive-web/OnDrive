@@ -42,7 +42,7 @@ export default function Hero({ onCTAClick }) {
               <div className={styles.statLabel}>Доставлених авто</div>
             </div>
             <div className={styles.stat}>
-              <div className={`${styles.statNumber} ${styles.bonus}`}>$500</div>
+              <div className={`${styles.statNumber} ${styles.bonus}`}>$300</div>
               <div className={styles.statLabel}>Бонус за клієнта</div>
             </div>
             <div className={styles.stat}>

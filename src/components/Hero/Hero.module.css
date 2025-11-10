@@ -7,31 +7,22 @@
   overflow: hidden;
   padding: var(--spacing-2xl) 0;
 }
+
 .hero_background_slider {
+  margin-top: 25px;
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 420px;
+  margin-bottom: 1.5rem;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 30px;
 }
 
 .slide {
   width: 100%;
-  height: 500px;
+  height: 420px;
   background-size: cover;
   background-position: center;
-}
-
-.overlayContent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  z-index: 10;
-  max-width: 800px;
-  padding: 0 1rem;
 }
 
 .hero_background_slider::after {
@@ -46,130 +37,50 @@
   z-index: 5;
 }
 
-.title {
-  color: #fff;
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  color: #fff;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.6;
-}
-
-.background {
+.overlayContent {
   position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.background::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -10%;
-  width: 60%;
-  height: 60%;
-  background: url('https://content.homenetiol.com/2000292/2195320/0x0/b5ff2dfdfb484482a9051c87b406edab.jpg')
-    no-repeat center;
-  background-size: contain;
-  opacity: 0.08;
-  transform: translateY(-50%) rotate(-5deg);
-  z-index: 1;
-  animation: float 15s ease-in-out infinite;
-}
-
-.gradient1,
-.gradient2,
-.gradient3 {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.15;
-  animation: float 1 ease-in-out infinite;
-}
-
-.gradient1 {
-  width: 500px;
-  height: 500px;
-  background: var(--color-accent);
-  top: -10%;
-  right: -10%;
-  animation-delay: 0s;
-}
-
-.gradient2 {
-  width: 400px;
-  height: 400px;
-  background: #0099cc;
-  bottom: -10%;
-  left: -10%;
-  animation-delay: 7s;
-}
-
-.gradient3 {
-  width: 350px;
-  height: 350px;
-  background: var(--color-accent);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation-delay: 14s;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  max-width: 800px;
+  max-height: 1200px;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 70px);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-shadow:
+    2px 2px 0 #a88f6b,
+    4px 4px 15px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1.2s ease-out both;
+}
+
+.subtitle {
+  display: inline-block;
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(239, 243, 255, 0.15);
+  border-radius: 40px;
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  overflow: visible;
 }
 
 .content {
   position: relative;
   z-index: 10;
   text-align: center;
-  max-width: 900px;
   margin: 0 auto;
   animation: fadeInUp 1s ease-out;
-}
-
-.content::after {
-  content: '';
-  position: absolute;
-  bottom: -200px;
-  left: -250px;
-  width: 500px;
-  height: 400px;
-  background: url('https://content.homenetiol.com/2000292/2134889/0x0/3cfa16c819cc4d54b5460cf98116ee55.jpg')
-    no-repeat center;
-  background-size: contain;
-  opacity: 0.06;
-  z-index: -1;
-  pointer-events: none;
-  transform: scaleX(-1) rotate(-8deg);
-  animation: float 18s ease-in-out infinite 5s;
-}
-
-.hero_background_slider {
-  position: relative;
-  width: 100%;
-  height: 420px; /* подогнать под дизайн */
-  margin-bottom: 1.5rem;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-/* слайд как фон */
-.slide {
-  width: 100%;
-  height: 420px;
-  background-size: cover;
-  background-position: center;
-}
-
-.mySwiper .swiper-button-next,
-.mySwiper .swiper-button-prev {
-  color: #fff;
-}
-
-.mySwiper .swiper-pagination-bullet {
-  opacity: 0.8;
 }
 
 .ctaButton {
@@ -226,11 +137,6 @@
   letter-spacing: 0.05em;
 }
 
-.highlight {
-  background: linear-gradient(135deg, #f4e7d4, #fdf9f3);
-  border: 1px solid rgba(180, 140, 90, 0.3);
-  box-shadow: 0 6px 20px rgba(150, 110, 70, 0.15);
-}
 
 @keyframes fadeInUp {
   from {
@@ -243,11 +149,6 @@
   }
 }
 
-.highlight {
-  background: linear-gradient(135deg, #e0f7ff, #f0fbff);
-  border: 1px solid rgba(0, 153, 204, 0.2);
-}
-
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
@@ -256,13 +157,6 @@
 
   .stats {
     gap: var(--spacing-md);
-  }
-
-  .gradient1,
-  .gradient2,
-  .gradient3 {
-    width: 300px;
-    height: 300px;
   }
 
   .background::before {
@@ -274,28 +168,5 @@
 
   .content::after {
     display: none;
-  }
-}
-
-.statNumber.bonus {
-  background: linear-gradient(90deg, #ff6b00, #ffd500);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: pulse-glow 2s infinite;
-}
-
-@keyframes pulse-glow {
-  0%,
-  100% {
-    text-shadow:
-      0 0 10px rgba(255, 107, 0, 0.6),
-      0 0 20px rgba(255, 213, 0, 0.4);
-    transform: scale(1);
-  }
-  50% {
-    text-shadow:
-      0 0 25px rgba(255, 107, 0, 0.9),
-      0 0 40px rgba(255, 213, 0, 0.7);
-    transform: scale(1.1);
   }
 }

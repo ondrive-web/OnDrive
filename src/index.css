@@ -207,9 +207,12 @@ p {
   box-shadow: var(--shadow-md);
 }
 
+
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  box-shadow: 
+    0 4px 15px rgba(237, 255, 0, 0.6),
+    0 0 25px rgba(237, 255, 0, 0.9);  
 }
 
 .btn-primary:active {

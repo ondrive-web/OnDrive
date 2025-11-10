@@ -25,15 +25,17 @@ export default function Hero({ onCTAClick }) {
           </button>
 
           <div className={styles.stats}>
-            <div className={styles.stat}>
+            <div className={styles.statCard}>
               <div className={styles.statNumber}>500+</div>
               <div className={styles.statLabel}>Доставлених авто</div>
             </div>
-            <div className={styles.stat}>
-              <div className={`${styles.statNumber} ${styles.bonus}`}>$300</div>
+
+            <div className={`${styles.statCard} ${styles.highlight}`}>
+              <div className={styles.statNumber}>$300</div>
               <div className={styles.statLabel}>Бонус за клієнта</div>
             </div>
-            <div className={styles.stat}>
+
+            <div className={styles.statCard}>
               <div className={styles.statNumber}>100+</div>
               <div className={styles.statLabel}>Активних партнерів</div>
             </div>

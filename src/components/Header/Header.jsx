@@ -3,7 +3,6 @@ import { Menu, X } from 'lucide-react';
 import styles from './Header.module.css';
 import { navLinks } from '../../data/NavLinks';
 
-
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,14 +35,11 @@ export default function Header() {
             onClick={e => handleNavClick(e, '#hero')}
           >
             <div className={styles.logoIcon}>
-              {/* <img
-                style={{
-                  width: '40px',
-                  height: '40px',
-                  borderRadius: '30%',
-                }}
+              <img
+                style={{ width: '40px', height: '40px', borderRadius: '30%' }}
                 src="/headerLogo.svg"
-              /> */}
+                alt="OnDrive logo"
+              />
             </div>
             <span className={styles.logoText}>OnDrive</span>
           </a>

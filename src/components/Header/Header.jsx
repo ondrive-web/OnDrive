@@ -35,7 +35,15 @@ export default function Header() {
             onClick={e => handleNavClick(e, '#hero')}
           >
             <div className={styles.logoIcon}>
-              {/* <img src="/src/assets/svg/header_logo_optimized.svg" alt="OnDrive logo" /> */}
+              <img
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '30%',
+                }}
+                src="/src/assets/svg/header_logo.svg"
+                alt="OnDrive logo"
+              />
             </div>
             <span className={styles.logoText}>OnDrive</span>
           </a>

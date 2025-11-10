@@ -41,7 +41,7 @@ export default function Header() {
                   height: '40px',
                   borderRadius: '30%',
                 }}
-                src="/src/assets/svg/header_logo.svg"
+                src="#"
                 alt="OnDrive logo"
               />
             </div>

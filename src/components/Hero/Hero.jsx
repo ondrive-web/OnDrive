@@ -1,4 +1,6 @@
-import { ArrowRight, Car } from 'lucide-react';
+import { CircleArrowRight } from 'lucide-react';
+import HeroSlider from './HeroSlider';
+
 import styles from './Hero.module.css';
 
 export default function Hero({ onCTAClick }) {
@@ -12,42 +14,36 @@ export default function Hero({ onCTAClick }) {
 
       <div className="container">
         <div className={styles.content}>
-          <div className={styles.iconWrapper}>
-            <Car className={styles.icon} size={60} />
-          </div>
-
-          <h1 className={styles.title}>Партнерська програма</h1>
-
-          <p className={styles.subtitle}>
-            Ваш надійний партнер у пошуку та доставці авто з США
-          </p>
-
-          <p className={styles.description}>
-            Приєднуйтесь до нашої партнерської програми та отримуйте гарантовані
-            винагороди за кожного клієнта. Швидку доставку авто, професійний
-            сервіс, прозорі умови, вигідні бонуси, та багато іншого.
-          </p>
+          <HeroSlider />
 
           <button
             onClick={onCTAClick}
             className={`btn btn-primary ${styles.ctaButton}`}
           >
             Прорахувати вартість
-            <ArrowRight size={20} />
+            <CircleArrowRight size={40} />
           </button>
 
           <div className={styles.stats}>
-            <div className={styles.stat}>
+            <div className={styles.statCard}>
               <div className={styles.statNumber}>500+</div>
-              <div className={styles.statLabel}>Доставлених авто</div>
+              <div className={styles.statLabel}>
+                Понад 500 авто успішно доставлено
+              </div>
             </div>
-            <div className={styles.stat}>
-              <div className={`${styles.statNumber} ${styles.bonus}`}>$300</div>
-              <div className={styles.statLabel}>Бонус за клієнта</div>
+
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>$300</div>
+              <div className={styles.statLabel}>
+                Отримай від $300 за кожного нового клієнта
+              </div>
             </div>
-            <div className={styles.stat}>
+
+            <div className={styles.statCard}>
               <div className={styles.statNumber}>100+</div>
-              <div className={styles.statLabel}>Активних партнерів</div>
+              <div className={styles.statLabel}>
+                Понад 100 надійних партнерів по всій країні
+              </div>
             </div>
           </div>
         </div>

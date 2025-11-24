@@ -1,0 +1,23 @@
+.cardSection {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 120px 10%;
+  }
+  
+  .card {
+    background: #2456f7;
+    color: white;
+    padding: 60px;
+    border-radius: 25px;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

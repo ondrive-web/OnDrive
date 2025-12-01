@@ -1,13 +1,13 @@
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
-import CardSection from './components/Services/Services';
+import About from './components/Services/About';
 
 function App() {
   return (
     <div>
       <Header />
       <Hero />
-      <CardSection />
+      <About />
     </div>
   );
 }

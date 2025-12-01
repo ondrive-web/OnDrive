@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import styles from "./Services.module.css";
+import React, { useEffect, useRef } from 'react';
+import styles from './About.module.css';
 
 const Card = ({ title, number, children }) => {
   const ref = useRef(null);
@@ -24,7 +24,7 @@ const Card = ({ title, number, children }) => {
   );
 };
 
-export default function CardSection() {
+export default function About() {
   return (
     <section className={styles.wrapper}>
       <Card title="Коммуникация" number="01">

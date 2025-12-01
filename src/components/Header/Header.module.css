@@ -32,8 +32,8 @@
   gap: var(--spacing-sm);
   text-decoration: none;
   color: var(--color-text-primary);
-  font-weight: 700;
-  font-size: 1.25rem;
+  font-weight: 900;
+  font-size: 30px;
   transition: all 0.3s ease;
 }
 

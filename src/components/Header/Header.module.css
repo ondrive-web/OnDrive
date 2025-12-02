@@ -11,7 +11,7 @@
 }
 
 .header.scrolled {
-  background: red;
+  background: inherit;
   /* background: white; */
 
   border-bottom-color: var(--color-border);

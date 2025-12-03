@@ -1,0 +1,53 @@
+.contactButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 85px;
+  height: 85px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+.contactButton:hover {
+  transform: scale(1.05);
+}
+
+.contactMenu {
+  position: fixed;
+  bottom: 120px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.contactMenu a {
+  padding: 10px 14px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}

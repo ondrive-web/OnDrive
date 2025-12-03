@@ -1,6 +1,6 @@
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
-import About from './components/About/About';
+import AdvantagesSection from './components/Advantages/AdvantagesSection';
 import ContactButton from './components/ContactButton/ContactButton';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div>
       <Header />
       <Hero />
-      <About />
+      <AdvantagesSection />
 
       {/*  */}
       <ContactButton />

@@ -1,103 +1,114 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+  width: 100%;
+  min-height: 100vh; /* Секція займає весь екран, щоб центрувати контент */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  padding: var(--spacing-2xl) 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.hero_background_slider {
-  margin-top: 25px;
-  position: relative;
-  width: 100vw;
-  height: 80vh;
-  margin-bottom: 1.5rem;
+/* Обгортка слайдера - це наш "фон" */
+.sliderWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85vh; /* Висота слайдера (менше ніж 100vh) */
+  z-index: 0;
   overflow: hidden;
-  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* Стиль самого слайда */
 .slide {
   width: 100%;
-  height: 420px;
+  height: 100%;
   background-size: cover;
   background-position: center;
 }
 
-.hero_background_slider::after {
+/* Затемнення поверх картинки, щоб текст читався */
+.sliderWrapper::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.6)
+    rgba(0, 0, 0, 0.4) 0%, 
+    rgba(0, 0, 0, 0.7) 100%
   );
-  z-index: 5;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.overlayContent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Контейнер для тексту та кнопки */
+.contentContainer {
+  position: relative;
+  z-index: 10; /* Поверх слайдера */
   text-align: center;
+  max-width: 900px;
+  padding: 0 20px;
+  margin-top: 60px; /* Відступ зверху, щоб компенсувати висоту хедера */
   color: #fff;
-  z-index: 10;
-  max-width: 800px;
-  max-height: 1200px;
-  padding: 0 1rem;
 }
 
+/* Типографіка */
 .title {
-  font-size: clamp(2.5rem, 6vw, 70px);
-  font-weight: 600;
+  font-size: clamp(2.5rem, 5vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
   color: #fff;
-  letter-spacing: -0.02em;
-  text-shadow:
-    2px 2px 0 #a88f6b,
-    4px 4px 15px rgba(0, 0, 0, 0.4);
-  animation: fadeInUp 1.2s ease-out both;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out both;
 }
 
 .subtitle {
   display: inline-block;
-
-  position: relative;
-  padding: 0.75rem 1.5rem;
-  background-color: rgba(239, 243, 255, 0.15);
-  border-radius: 40px;
-  color: #fff;
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 18px);
   line-height: 1.6;
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  overflow: visible;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 40px;
+  max-width: 700px;
+  animation: fadeInUp 1s ease-out 0.2s both;
 }
 
-.content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  margin: 0 auto;
-  animation: fadeInUp 1s ease-out;
-}
-
+/* Кнопка */
 .ctaButton {
-  background: #a9a9a9;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #dbeafe; /* Світлий відтінок, як на фото */
   color: #000;
-  margin-top: 10px;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 2rem;
-  padding: 1rem 2.5rem;
-  animation: fadeInUp 1s ease-out 0.8s both;
+  font-size: 1.1rem;
+  padding: 16px 32px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  background-color: #fff;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -105,20 +116,17 @@
   }
 }
 
+/* Адаптив */
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 5rem 0 3rem;
+    padding-bottom: 50px;
   }
-
-  .background::before {
-    width: 80%;
-    height: 50%;
-    opacity: 0.05;
-    right: -20%;
+  .sliderWrapper {
+    height: 70vh; /* На мобільному слайдер менший */
+    position: absolute;
   }
-
-  .content::after {
-    display: none;
+  .contentContainer {
+    margin-top: 100px; /* Більший відступ для мобільного хедера */
   }
 }

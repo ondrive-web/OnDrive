@@ -1,19 +1,14 @@
-.header {
-  position: fixed;
+header {
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
-  background: white;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
+  width: 100%;
+  background-color: transparent; 
+  z-index: 100;
 }
 
 .header.scrolled {
   background: inherit;
-  /* background: white; */
-
   border-bottom-color: var(--color-border);
   box-shadow: var(--shadow-md);
 }

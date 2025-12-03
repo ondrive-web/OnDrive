@@ -1,6 +1,6 @@
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
-import About from './components/Services/About';
+import About from './components/About/About';
 import ContactButton from './components/ContactButton/ContactButton';
 
 function App() {

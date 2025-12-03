@@ -1,3 +1,4 @@
+import { CircleArrowRight } from 'lucide-react';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -10,7 +11,7 @@ import hero2 from '../../assets/images/hero2.jpg';
 import hero3 from '../../assets/images/hero3.jpg';
 import hero4 from '../../assets/images/hero4.jpg';
 
-export default function HeroSlider() {
+export default function HeroSlider({ onCTAClick }) {
   const slides = [hero1, hero2, hero3, hero4];
 
   return (
@@ -46,6 +47,14 @@ export default function HeroSlider() {
           руках: радимо, пояснюємо, попереджаємо про ризики й залишаємо фінальне
           рішення за вами.
         </p>
+
+        <button
+          onClick={onCTAClick}
+          className={`btn btn-primary ${styles.ctaButton}`}
+        >
+          Прорахувати вартість
+          <CircleArrowRight size={40} />
+        </button>
       </div>
     </div>
   );

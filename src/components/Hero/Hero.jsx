@@ -6,13 +6,12 @@ import styles from './Hero.module.css';
 export default function Hero({ onCTAClick }) {
   return (
     <section className={styles.hero}>
-      {/* 1. Слайдер на фоні (він absolute і лежить під низом) */}
       <HeroSlider />
 
-      {/* 2. Контент поверх слайдера */}
       <div className={styles.contentContainer}>
         <h1 className={styles.title}>
-          Авто з аукціонів <br /> США, Канади та Кореї
+          Авто з аукціонів <br />
+          США, Канади та Кореї
         </h1>
 
         <div>

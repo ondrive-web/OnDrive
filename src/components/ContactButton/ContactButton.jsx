@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, X, Send, Instagram, Phone } from 'lucide-react'; 
+import { MessageCircle, X, Send, Instagram, Phone } from 'lucide-react';
 import styles from './ContactButton.module.css';
 
 const ContactButton = () => {

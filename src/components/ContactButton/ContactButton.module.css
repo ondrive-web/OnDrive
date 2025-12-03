@@ -1,54 +1,87 @@
-.contactButton {
+.wrapper {
   position: fixed;
-  bottom: 20px;
-  right: 3vw;
-  width: 85px;
-  height: 85px;
-  background: white;
-  color: black;
-  border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
+  bottom: 30px;
+  right: 30px;
   z-index: 1000;
-  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-.contactButton:hover {
-  transform: scale(1.05);
+.mainButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffd700;
+  border: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.contactMenu {
-  position: fixed;
-  bottom: 120px;
-  right: 3vw;
+.mainButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.buttonActive {
+  background-color: #fff;
+  transform: rotate(90deg);
+}
+
+.menu {
   display: flex;
   flex-direction: column;
   gap: 10px;
   opacity: 0;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition: 0.3s ease;
-  z-index: 999;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  bottom: 75px;
 }
 
-.open {
+.menuOpen {
   opacity: 1;
-  pointer-events: auto;
+  visibility: visible;
   transform: translateY(0);
 }
 
-.contactMenu a {
-  padding: 10px 14px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
   text-decoration: none;
-  color: black;
+  color: #333;
   font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s;
+  white-space: nowrap;
+
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.link:hover {
+  background-color: #f8f9fa;
+  transform: translateX(-5px);
+  color: #000;
+}
+
+.menuOpen .link {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  transition-delay: var(--delay);
 }

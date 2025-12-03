@@ -86,19 +86,24 @@ header {
 }
 
 .phoneLink {
-  border: 1px solid black;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 30px;
-  color: black;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 50px;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
 }
 
 .phoneLink:hover {
-  background-color: black;
-  color: white;
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 .ctaButton {

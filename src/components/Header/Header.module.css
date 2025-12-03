@@ -3,7 +3,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent; 
+  background-color: transparent;
   z-index: 100;
 }
 
@@ -50,7 +50,7 @@ header {
 
 .logoText {
   white-space: nowrap;
-  color: #000000;
+  color: #ffff;
 }
 
 .nav {
@@ -60,7 +60,7 @@ header {
 }
 
 .navLink {
-  color: black;
+  color: #ffff;
 
   text-decoration: none;
   font-weight: 500;

@@ -1,37 +1,6 @@
 import React from 'react';
 import styles from './Advantages.module.css';
-import { MessageCircle, Search, Zap, ClipboardCheck } from 'lucide-react';
-
-const advantagesData = [
-  {
-    id: 1,
-    title: 'Текст',
-    description:
-      'ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекст',
-    icon: <MessageCircle size={120} color="white" strokeWidth={1} />,
-  },
-  {
-    id: 2,
-    title: 'Текст',
-    description:
-      'ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекст',
-    icon: <Search size={120} color="white" strokeWidth={1} />,
-  },
-  {
-    id: 3,
-    title: 'Текст',
-    description:
-      'ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекст',
-    icon: <Zap size={120} color="white" strokeWidth={1} />,
-  },
-  {
-    id: 4,
-    title: 'Текст',
-    description:
-      'ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекст',
-    icon: <ClipboardCheck size={120} color="white" strokeWidth={1} />,
-  },
-];
+import { advantagesData } from '../../data/Advantages.jsx';
 
 const AdvantagesSection = () => {
   return (

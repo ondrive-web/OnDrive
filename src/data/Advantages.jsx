@@ -1,3 +1,5 @@
+import { MessageCircle, Search, Zap, ClipboardCheck } from 'lucide-react';
+
 export const advantagesData = [
   {
     id: 1,

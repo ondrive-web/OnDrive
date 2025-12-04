@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './Advantages.module.css';
-// Можна використовувати іконки з бібліотеки, наприклад lucide-react,
-// або вставити свої <img> в блок .imageWrapper
 import { MessageCircle, Search, Zap, ClipboardCheck } from 'lucide-react';
 
 const advantagesData = [
@@ -24,14 +22,14 @@ const advantagesData = [
     title: 'Текст',
     description:
       'ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекст',
-    icon: <Zap size={120} color="white" strokeWidth={1} />, // Іконка блискавки для швидкості
+    icon: <Zap size={120} color="white" strokeWidth={1} />,
   },
   {
     id: 4,
     title: 'Текст',
     description:
       'ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекст',
-    icon: <ClipboardCheck size={120} color="white" strokeWidth={1} />, // Іконка списку
+    icon: <ClipboardCheck size={120} color="white" strokeWidth={1} />,
   },
 ];
 

@@ -5,7 +5,6 @@ import { advantagesData } from '../../data/Advantages.jsx';
 const AdvantagesSection = () => {
   return (
     <section className={styles.section}>
-      <h1>Title</h1>
       <div className={styles.container}>
         {advantagesData.map((item, index) => {
           // Розраховуємо відступ зверху, щоб картки трохи виглядали одна з-під одної

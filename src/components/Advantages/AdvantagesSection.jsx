@@ -24,7 +24,7 @@ const AdvantagesSection = () => {
                   <div className={styles.tag}>НАШІ ПЕРЕВАГИ</div>
                   <div className={styles.number}>
                     0{index + 1}
-                    <span className={styles.totalNumber}>/04</span>
+                    <span className={styles.totalNumber}>/06</span>
                   </div>
                 </div>
 

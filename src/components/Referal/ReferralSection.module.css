@@ -1,0 +1,193 @@
+.section {
+    background-color: #f9f7f2;
+    padding: 100px 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 700px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #4a403a;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  
+  .highlight {
+    color: #dfa878;
+  }
+  
+  .subtitle {
+    color: #8c8177;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  /* --- Картки --- */
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  
+  .card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(166, 145, 129, 0.08);
+    border: 1px solid rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Спеціальний стиль для популярної картки */
+  .popularCard {
+    border: 2px solid #dfa878;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(223, 168, 120, 0.15);
+  }
+  
+  .badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: #dfa878;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 40px;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 10px rgba(223, 168, 120, 0.4);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .iconWrapper {
+    width: 60px;
+    height: 60px;
+    background: #fff6ed;
+    color: #dfa878;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+  }
+  
+  .iconWrapper svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .tierCount {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #8c8177;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+  
+  .tierPrice {
+    font-size: 3rem;
+    color: #4a403a;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+  }
+  
+  .tierSubtext {
+    font-size: 0.95rem;
+    color: #8c8177;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  /* --- Графік --- */
+  .chartSection {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(166, 145, 129, 0.08);
+    margin-bottom: 50px;
+  }
+  
+  .chartHeader {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .chartHeader h3 {
+    font-size: 1.5rem;
+    color: #4a403a;
+    margin: 0 0 8px 0;
+  }
+  
+  .chartHeader p {
+    color: #8c8177;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  
+  .chartWrapper {
+    width: 100%;
+    height: 350px; /* Висота графіка */
+  }
+  
+  /* --- Кнопка --- */
+  .ctaButton {
+    background: #4a403a;
+    color: #ffffff;
+    border: none;
+    padding: 16px 48px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 10px 20px rgba(74, 64, 58, 0.2);
+  }
+  
+  .ctaButton:hover {
+    background: #dfa878;
+    color: #4a403a;
+  }
+  
+  /* Мобільна адаптація */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+    .card {
+      padding: 30px 20px;
+    }
+    .popularCard {
+      transform: none; /* Прибираємо підйом на мобільному */
+    }
+    .chartSection {
+      padding: 20px;
+    }
+    .chartWrapper {
+      height: 250px;
+    }
+  }

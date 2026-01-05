@@ -4,6 +4,8 @@ import AdvantagesSection from './components/Advantages/AdvantagesSection';
 import Countries from './components/Countries/Countries';
 import AuctionsSection from './components/Auctions/Auctions';
 import BudgetSection from './components/Budget/BudgetSection';
+import Steps from './components/Steps/Steps';
+import ReferralSection from './components/Referal/Referal';
 
 // Contact BTN
 import ContactButton from './components/ContactButton/ContactButton';
@@ -17,6 +19,10 @@ function App() {
       <Countries />
       <AuctionsSection />
       <BudgetSection />
+      <Steps />
+      <ReferralSection />
+
+      
 
       {/*  */}
       <ContactButton />

@@ -1,0 +1,257 @@
+.section {
+    background-color: #ffffff; /* Білий фон для контрасту з бежевим */
+    padding: 100px 20px;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap; /* Для мобільного */
+  }
+  
+  /* --- Ліва сторона (Контент) --- */
+  .contentSide {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #4a403a;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  
+  .highlight {
+    color: #dfa878;
+    white-space: nowrap; /* Щоб не розривало фразу */
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #8c8177;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .benefitsList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+  
+  .benefitItem {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .checkIcon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: #fff6ed;
+    color: #dfa878;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .benefitText {
+    color: #4a403a;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  
+  .downloadButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: #dfa878;
+    border: 2px solid rgba(223, 168, 120, 0.3);
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+  }
+  
+  .downloadButton:hover {
+    background-color: #fff6ed;
+    border-color: #dfa878;
+    transform: translateY(-2px);
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+  }
+  
+  /* --- Права сторона (Візуал) --- */
+  .visualSide {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+  
+  /* Декоративна пляма на фоні */
+  .blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #f9f7f2; /* Бежева пляма */
+    border-radius: 50%;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* "Паперовий" документ */
+  .documentCard {
+    position: relative;
+    width: 320px;
+    height: 420px;
+    background: #ffffff;
+    border-radius: 4px; /* Гострі кути як у паперу, або ледь заокруглені */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Глибока тінь */
+    padding: 40px;
+    z-index: 1;
+    transform: rotate(-3deg); /* Легкий нахил */
+    transition: transform 0.4s ease;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .documentCard:hover {
+    transform: rotate(0deg) scale(1.02);
+  }
+  
+  /* Вміст "документа" */
+  .docHeader {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .docTitle {
+    font-weight: 800;
+    color: #4a403a;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .docDate {
+    color: #aaa;
+    font-size: 0.8rem;
+  }
+  
+  .docLines .line {
+    height: 8px;
+    background: #f5f5f5;
+    margin-bottom: 12px;
+    border-radius: 4px;
+  }
+  
+  /* Ефект печатки */
+  .stamp {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #dfa878;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #dfa878;
+    font-weight: 900;
+    font-size: 0.9rem;
+    transform: rotate(-15deg);
+    opacity: 0.8;
+    mask-image: url("data:image/svg+xml;utf8,<svg...>"), none; /* Можна додати гранж-текстуру для реалізму, але це опціонально */
+    
+    /* Анімація "штампування" */
+    animation: stampIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-delay: 0.5s;
+    opacity: 0; /* Спочатку невидима */
+  }
+  
+  .stamp span {
+    font-size: 0.6rem;
+    font-weight: 400;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+  
+  /* Скріпка */
+  .clip {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 15px;
+    height: 40px;
+    background: #8c8177;
+    border-radius: 10px;
+    z-index: 2;
+    opacity: 0.5;
+  }
+  
+  @keyframes stampIn {
+    0% {
+      opacity: 0;
+      transform: scale(2) rotate(10deg);
+    }
+    100% {
+      opacity: 0.8;
+      transform: scale(1) rotate(-15deg);
+    }
+  }
+  
+  /* --- Адаптивність --- */
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column-reverse; /* На мобільному спочатку текст, потім картинка (або навпаки) */
+      gap: 40px;
+    }
+    
+    .title {
+      font-size: 2rem;
+      text-align: center;
+    }
+    
+    .subtitle {
+      text-align: center;
+    }
+    
+    .visualSide {
+      width: 100%;
+    }
+  
+    .contentSide {
+      width: 100%;
+    }
+    
+    .downloadButton {
+      width: 100%;
+      justify-content: center;
+    }
+  }

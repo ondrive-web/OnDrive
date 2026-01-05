@@ -51,33 +51,18 @@
   text-align: center;
   box-shadow: 0 10px 30px rgba(166, 145, 129, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.02);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
 /* Спеціальний стиль для популярної картки */
 .popularCard {
-  border: 2px solid #dfa878;
+  /* --- NEW ACCENT: Яскрава рамка --- */
+  border: 2px solid #edff00; 
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(223, 168, 120, 0.15);
-}
-
-.badge {
-  position: absolute;
-  top: 20px;
-  right: -30px;
-  background: #dfa878;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 6px 40px;
-  transform: rotate(45deg);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  box-shadow: 0 4px 10px rgba(223, 168, 120, 0.4);
+  /* Світіння лаймовим кольором */
+  box-shadow: 0 20px 40px rgba(237, 255, 0, 0.15); 
 }
 
 .card:hover {
@@ -87,13 +72,16 @@
 .iconWrapper {
   width: 60px;
   height: 60px;
-  background: #fff6ed;
-  color: #dfa878;
+  /* --- NEW ACCENT: Темний фон + Лаймова іконка --- */
+  background: #4a403a; 
+  color: #edff00;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px auto;
+  /* Легка тінь */
+  box-shadow: 0 5px 15px rgba(74, 64, 58, 0.2);
 }
 
 .iconWrapper svg {
@@ -128,19 +116,23 @@
 .ctaButton {
   background: #4a403a;
   color: #ffffff;
-  border: none;
+  border: 2px solid transparent; /* Готуємо місце під рамку */
   padding: 16px 48px;
   border-radius: 50px;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   box-shadow: 0 10px 20px rgba(74, 64, 58, 0.2);
 }
 
+/* --- NEW ACCENT: Ховер ефект --- */
 .ctaButton:hover {
-  background: #dfa878;
-  color: #4a403a;
+  background: #4a403a;   /* Фон лишається темним */
+  color: #edff00;        /* Текст стає лаймовим */
+  border-color: #edff00; /* Рамка лаймова */
+  box-shadow: 0 0 20px rgba(237, 255, 0, 0.3); /* Світіння */
+  transform: translateY(-2px);
 }
 
 /* Мобільна адаптація */
@@ -152,6 +144,6 @@
     padding: 30px 20px;
   }
   .popularCard {
-    transform: none; /* Прибираємо підйом на мобільному */
+    transform: none; 
   }
 }

@@ -21,9 +21,7 @@ const ReferralSection = () => {
               key={tier.id}
               className={`${styles.card} ${tier.isPopular ? styles.popularCard : ''}`}
             >
-              {tier.isPopular && (
-                <div className={styles.badge}>Найпопулярніше</div>
-              )}
+      
 
               <div className={styles.iconWrapper}>{tier.icon}</div>
 

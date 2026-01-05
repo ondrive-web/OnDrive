@@ -1,31 +1,32 @@
-import { auctionsData } from '../../data/AuctionsSection';
+import { auctionsData } from '../../data/AuctionsSection.jsx'
 import styles from './Auctions.module.css';
 
-export default function AuctionsSection () {
+export default function AuctionsSection() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.title}>
-          Аукціони, з якими ми <span className={styles.highlight}>працюємо</span>
+          Аукціони, з якими ми{' '}
+          <span className={styles.highlight}>працюємо</span>
         </h2>
 
         <div className={styles.grid}>
           {auctionsData.map((auction, index) => (
-            <div 
-              key={auction.id} 
+            <div
+              key={auction.id}
               className={styles.card}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Передня частина */}
               <div className={styles.front}>
-                <img 
-                  src={auction.logo} 
-                  alt={auction.name} 
+                <img
+                  src={auction.logo}
+                  alt={auction.name}
                   className={styles.logo}
-                  loading="lazy" 
+                  loading="lazy"
                 />
               </div>
-              
+
               {/* Оверлей при наведенні */}
               <div className={styles.overlay}>
                 <h3 className={styles.name}>{auction.name}</h3>
@@ -40,4 +41,4 @@ export default function AuctionsSection () {
       </div>
     </section>
   );
-};
+}

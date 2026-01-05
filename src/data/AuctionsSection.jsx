@@ -23,4 +23,13 @@ export const auctionsData = [
       'Закритий аукціон виключно для дилерів. Продаються цілі автомобілі без ДТП, лізингові повернення.',
     bestFor: 'купівлі цілого, надійного авто.',
   },
+  {
+    id: 4,
+    name: 'Encar',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ44NSDVS3ZiickjSSOPemGcVfpYKHesAAdKQ&s',
+    description:
+      'Лідер ринку Південної Кореї. Прозорий майданчик з фіксованими цінами, де продаються цілі автомобілі з детальною історією обслуговування.',
+    bestFor:
+      'купівлі Hyundai/Kia в багатих комплектаціях та авто на газу (LPI).',
+  },
 ];

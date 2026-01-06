@@ -1,9 +1,9 @@
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
-import AdvantagesSection from './components/Advantages/AdvantagesSection';
+import AdvantagesSection from './components/Advantages/Advantages';
 import Countries from './components/Countries/Countries';
 import AuctionsSection from './components/Auctions/Auctions';
-import BudgetSection from './components/Budget/BudgetSection';
+import BudgetSection from './components/Budget/Budget';
 import Steps from './components/Steps/Steps';
 import ReferralSection from './components/Referal/Referal';
 
@@ -21,8 +21,6 @@ function App() {
       <BudgetSection />
       <Steps />
       <ReferralSection />
-
-      
 
       {/*  */}
       <ContactButton />

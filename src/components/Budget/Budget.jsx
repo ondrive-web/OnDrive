@@ -36,7 +36,7 @@ export default function BudgetSection() {
           {/* Права колонка: Контент */}
           <div className={styles.contentArea}>
             {budgetData.map((item, index) => (
-              // Рендеримо всі, але показуємо лише активний для анімації
+              //!Рендеримо всі, але показуємо лише активний для анімації
               <div
                 key={item.id}
                 className={`${styles.contentItem} ${activeTab === index ? styles.show : ''}`}

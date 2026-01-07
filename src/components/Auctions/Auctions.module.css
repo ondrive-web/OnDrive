@@ -1,6 +1,6 @@
 .section {
   background-color: #f3f4f6;
-  padding: 80px 20px;
+  padding: 35px 20px;
   font-family: 'Inter', sans-serif;
 }
 
@@ -86,7 +86,7 @@
 
 /* Взаємодія */
 .card:hover .front {
-  opacity: 0.1;
+  opacity: 0;
 }
 
 .card:hover .overlay {

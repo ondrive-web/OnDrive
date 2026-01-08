@@ -1,20 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import styles from './Header.module.css';
-import { navLinks } from '../../data/NavLinks';
+import MobileMenu from '../MobileMenu/MobileMenu';
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
@@ -26,7 +16,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header}`}>
       <div className="container">
         <div className={styles.headerContent}>
           <a
@@ -44,32 +34,11 @@ export default function Header() {
             <span className={styles.logoText}>OnDrive</span>
           </a>
 
-          <nav
-            className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ''}`}
-          >
-            {navLinks.map(link => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={styles.navLink}
-                onClick={e => handleNavClick(e, link.href)}
-              >
-                {link.label}
-              </a>
-            ))}
-
-            <a href="tel:+380991112233" className={styles.phoneLink}>
-              +38 (111) 111-11-111
-            </a>
-
-            <a
-              href="#contact"
-              className={`btn btn-primary ${styles.ctaButton}`}
-              onClick={e => handleNavClick(e, '#contact')}
-            >
-              Залишити заявку
-            </a>
-          </nav>
+          <MobileMenu
+            isOpen={isMobileMenuOpen}
+            onNavClick={handleNavClick}
+            phoneNumber="+38 (111) 111-11-111"
+          />
 
           <button
             className={styles.mobileMenuButton}

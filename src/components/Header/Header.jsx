@@ -6,24 +6,13 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleNavClick = (e, href) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsMobileMenuOpen(false);
-    }
-  };
-
+  const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMenu = () => setIsMobileMenuOpen(false);
   return (
     <header className={`${styles.header}`}>
       <div className="container">
         <div className={styles.headerContent}>
-          <a
-            href="#hero"
-            className={styles.logo}
-            onClick={e => handleNavClick(e, '#hero')}
-          >
+          <a>
             <div className={styles.logoIcon}>
               <img
                 style={{ width: '40px', height: '40px', borderRadius: '30%' }}
@@ -36,15 +25,11 @@ export default function Header() {
 
           <MobileMenu
             isOpen={isMobileMenuOpen}
-            onNavClick={handleNavClick}
+            onNavClick={closeMenu}
             phoneNumber="+38 (111) 111-11-111"
           />
 
-          <button
-            className={styles.mobileMenuButton}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
+          <button className={styles.mobileMenuButton} onClick={toggleMenu}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

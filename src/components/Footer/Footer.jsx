@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import {
   Facebook,
   Instagram,
@@ -6,11 +5,9 @@ import {
   Mail,
   Phone,
   MapPin,
-  CheckCircle,
   Globe,
-  Sparkles,
 } from 'lucide-react';
-// Імпорт CSS модуля
+
 import styles from './Footer.module.css';
 
 const SocialLink = ({ href, icon, label }) => (
@@ -29,81 +26,18 @@ const FooterLink = ({ href, children }) => (
 );
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleSubscribe = e => {
-    e.preventDefault();
-    if (email) {
-      setIsSubscribed(true);
-      setTimeout(() => {
-        setIsSubscribed(false);
-        setEmail('');
-      }, 3000);
-    }
-  };
-
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className={styles.footer}>
-      {/* Градієнтна смужка */}
-      <div className={styles.gradientLine}></div>
-
       <div className={styles.container}>
-        {/* Верхня частина (Підписка) */}
-        <div className={styles.topSection}>
-          <div>
-            <h2 className={styles.subscribeTitle}>Підбірка вигідних лотів</h2>
-            <p className={styles.subscribeText}>
-              Отримуйте щотижневий дайджест найкращих авто з аукціонів США та
-              Кореї.
-            </p>
-          </div>
-          <div style={{ width: '100%' }}>
-            <form onSubmit={handleSubscribe} className={styles.subscribeForm}>
-              <input
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder="Ваш email для підбірок"
-                className={styles.input}
-                required
-              />
-              <button
-                type="submit"
-                className={`${styles.subscribeBtn} ${isSubscribed ? styles.btnSuccess : styles.btnDefault}`}
-              >
-                {isSubscribed ? (
-                  <>
-                    <CheckCircle size={18} /> Підписано
-                  </>
-                ) : (
-                  <>
-                    <span
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                      }}
-                    >
-                      Отримувати лоти <Sparkles size={16} color="#facc15" />
-                    </span>
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
-        </div>
-
-        {/* Основна сітка (Меню) */}
         <div className={styles.mainGrid}>
-          {/* Колонка 1: Бренд */}
           <div className={styles.brandColumn}>
             <h3 className={styles.brandLogo}>
               <div className={styles.logoIconBox}>
-                <Globe size={24} />
+                <img src="/headerLogo.svg" alt="OnDrive Logo" />
               </div>
+
               <span style={{ fontStyle: 'italic' }}>OnDrive</span>
             </h3>
             <p className={`${styles.subscribeText} ${styles.brandDesc}`}>
@@ -194,13 +128,12 @@ const Footer = () => {
 
         {/* Нижній рядок */}
         <div className={styles.bottomBar}>
-          <p>© {currentYear} OnDrive Import.</p>
+          <p>
+            © {currentYear} OnDrive. Імпорт автомобілів з США, Канади та Кореї.
+          </p>
           <div className={styles.legalLinks}>
             <a href="#" className={styles.legalLink}>
-              Договір оферти
-            </a>
-            <a href="#" className={styles.legalLink}>
-              Політика конфіденційності
+              Всі права захищені.
             </a>
           </div>
         </div>

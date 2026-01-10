@@ -6,6 +6,7 @@ import AuctionsSection from './components/Auctions/Auctions';
 import BudgetSection from './components/Budget/Budget';
 import Steps from './components/Steps/Steps';
 import ReferralSection from './components/Referal/Referal';
+import Footer from './components/Footer/Footer';
 
 // Contact BTN
 import ContactButton from './components/ContactButton/ContactButton';
@@ -21,6 +22,7 @@ function App() {
       <BudgetSection />
       <Steps />
       <ReferralSection />
+      <Footer />
 
       {/*  */}
       <ContactButton />

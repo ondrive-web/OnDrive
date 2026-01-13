@@ -1,20 +1,16 @@
 import i18n from 'i18next';
-
 import { initReactI18next } from 'react-i18next';
-
-// --- ВОТ ЗДЕСЬ МЫ ИХ ИМПОРТИРУЕМ ---
-
 import translationUA from './locales/ua/translation.json';
 import translationEN from './locales/en/translation.json';
 import transaltionRu from './locales/ru/translation.json';
 
 const resources = {
   ua: {
-    translation: translationUA, // Передаем содержимое файла
+    translation: translationUA,
   },
 
   en: {
-    translation: translationEN, // Передаем содержимое файла
+    translation: translationEN,
   },
   ru: {
     translation: transaltionRu,
@@ -28,9 +24,9 @@ i18n
   .init({
     resources,
 
-    lng: 'ua', // Язык по умолчанию
+    lng: 'ua', //! default language
 
-    fallbackLng: 'ua', // Если перевод не найден, показать этот язык
+    fallbackLng: 'ua', //! If translation is not found, show this language
 
     interpolation: {
       escapeValue: false,

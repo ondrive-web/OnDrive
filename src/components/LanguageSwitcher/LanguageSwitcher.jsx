@@ -1,53 +1,70 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-// Если используете CSS модули, импортируйте их, или просто inline-стили для примера
-// import styles from './LanguageSwitcher.module.css';
+import styles from './LanguageSwitcher.module.css';
+
+const languages = [
+  { code: 'ua', label: 'UA' },
+  { code: 'en', label: 'EN' },
+  { code: 'ru', label: 'RU' },
+];
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
-  // Функция смены языка
-  const changeLanguage = lang => {
-    i18n.changeLanguage(lang);
+  const currentLangCode = i18n.language;
+  // Знаходимо об'єкт поточної мови, щоб показати її label на кнопці
+  const currentLangObj =
+    languages.find(l => l.code === currentLangCode) || languages[0];
+
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
+  const handleLanguageChange = code => {
+    i18n.changeLanguage(code);
+    setIsOpen(false);
   };
 
-  // Проверка текущего языка для подсветки активной кнопки
-  const currentLang = i18n.language;
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div style={{ display: 'flex', gap: '10px' }}>
+    <div className={styles.switcherContainer} ref={dropdownRef}>
       <button
-        onClick={() => changeLanguage('ua')}
-        disabled={currentLang === 'ua'} // Делаем неактивной, если уже выбрана
-        style={{
-          fontWeight: currentLang === 'ua' ? 'bold' : 'normal',
-          opacity: currentLang === 'ua' ? 1 : 0.6,
-        }}
+        className={styles.triggerButton}
+        onClick={toggleDropdown}
+        aria-haspopup="true"
+        aria-expanded={isOpen}
       >
-        UA
+        <span className={styles.flag}>{currentLangObj.flag}</span>
+        <span>{currentLangObj.label}</span>
+        <span className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ''}`} />
       </button>
 
-      <button
-        onClick={() => changeLanguage('en')}
-        disabled={currentLang === 'en'}
-        style={{
-          fontWeight: currentLang === 'en' ? 'bold' : 'normal',
-          opacity: currentLang === 'en' ? 1 : 0.6,
-        }}
-      >
-        EN
-      </button>
-
-      <button
-        onClick={() => changeLanguage('ru')}
-        disabled={currentLang === 'ru'}
-        style={{
-          fontWeight: currentLang === 'ru' ? 'bold' : 'normal',
-          opacity: currentLang === 'ru' ? 1 : 0.6,
-        }}
-      >
-        RU
-      </button>
+      {isOpen && (
+        <div className={styles.dropdown}>
+          {languages.map(lang => (
+            <button
+              key={lang.code}
+              className={`${styles.option} ${currentLangCode === lang.code ? styles.activeOption : ''}`}
+              onClick={() => handleLanguageChange(lang.code)}
+            >
+              <span className={styles.flag}>{lang.flag}</span>
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

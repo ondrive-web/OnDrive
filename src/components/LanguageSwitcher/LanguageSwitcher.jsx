@@ -37,6 +37,17 @@ const LanguageSwitcher = () => {
       >
         EN
       </button>
+
+      <button
+        onClick={() => changeLanguage('ru')}
+        disabled={currentLang === 'ru'}
+        style={{
+          fontWeight: currentLang === 'ru' ? 'bold' : 'normal',
+          opacity: currentLang === 'ru' ? 1 : 0.6,
+        }}
+      >
+        RU
+      </button>
     </div>
   );
 };

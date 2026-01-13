@@ -5,8 +5,8 @@ import { initReactI18next } from 'react-i18next';
 // --- ВОТ ЗДЕСЬ МЫ ИХ ИМПОРТИРУЕМ ---
 
 import translationUA from './locales/ua/translation.json';
-
 import translationEN from './locales/en/translation.json';
+import transaltionRu from './locales/ru/translation.json';
 
 const resources = {
   ua: {
@@ -15,6 +15,9 @@ const resources = {
 
   en: {
     translation: translationEN, // Передаем содержимое файла
+  },
+  ru: {
+    translation: transaltionRu,
   },
 };
 

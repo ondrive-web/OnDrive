@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import styles from './Header.module.css';
 import MobileMenu from '../MobileMenu/MobileMenu';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,6 +33,8 @@ export default function Header() {
           <button className={styles.mobileMenuButton} onClick={toggleMenu}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+
+          <LanguageSwitcher />
         </div>
       </div>
     </header>

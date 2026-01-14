@@ -14,7 +14,6 @@ const LanguageSwitcher = () => {
   const dropdownRef = useRef(null);
 
   const currentLangCode = i18n.language;
-  // Знаходимо об'єкт поточної мови, щоб показати її label на кнопці
   const currentLangObj =
     languages.find(l => l.code === currentLangCode) || languages[0];
 

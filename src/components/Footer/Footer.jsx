@@ -63,7 +63,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Колонка 2: Меню */}
           <div>
             <h4 className={styles.columnTitle}>Меню</h4>
             <ul className={styles.linkList}>
@@ -74,7 +73,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Колонка 3: Напрямки */}
           <div>
             <h4 className={styles.columnTitle}>Напрямки</h4>
             <ul className={styles.linkList}>
@@ -85,7 +83,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Колонка 4: Контакти */}
           <div>
             <h4 className={styles.columnTitle}>Зв'язок</h4>
             <ul className={styles.contactList}>
@@ -126,7 +123,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Нижній рядок */}
         <div className={styles.bottomBar}>
           <p>
             © {currentYear} OnDrive. Імпорт автомобілів з США, Канади та Кореї.

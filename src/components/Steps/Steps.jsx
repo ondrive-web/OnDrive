@@ -4,7 +4,6 @@ export default function Steps() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        {/* Ліва частина: Текст та Гарантії */}
         <div className={styles.contentSide}>
           <h2 className={styles.title}>
             Працюємо виключно за{' '}
@@ -46,10 +45,8 @@ export default function Steps() {
           </button>
         </div>
 
-        {/* Права частина: Візуалізація договору */}
         <div className={styles.visualSide}>
           <div className={styles.documentCard}>
-            {/* Декоративні елементи "паперу" */}
             <div className={styles.docHeader}>
               <div className={styles.docTitle}>ДОГОВІР №2024/UA</div>
               <div className={styles.docDate}>м. Київ</div>
@@ -65,17 +62,14 @@ export default function Steps() {
               <div className={styles.line} style={{ width: '70%' }}></div>
             </div>
 
-            {/* Ефект "Мокрої печатки" */}
             <div className={styles.stamp}>
               APPROVED
               <span>Premium Auto</span>
             </div>
 
-            {/* Декоративна скріпка або куточок */}
             <div className={styles.clip}></div>
           </div>
 
-          {/* Фонова декоративна пляма */}
           <div className={styles.blob}></div>
         </div>
       </div>

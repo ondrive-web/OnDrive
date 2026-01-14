@@ -19,7 +19,6 @@ export default function BudgetSection() {
         </div>
 
         <div className={styles.wrapper}>
-          {/* Ліва колонка: Кнопки (Таби) */}
           <div className={styles.tabsList}>
             {budgetData.map((item, index) => (
               <button
@@ -33,7 +32,6 @@ export default function BudgetSection() {
             ))}
           </div>
 
-          {/* Права колонка: Контент */}
           <div className={styles.contentArea}>
             {budgetData.map((item, index) => (
               //!Рендеримо всі, але показуємо лише активний для анімації

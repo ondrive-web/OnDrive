@@ -95,7 +95,6 @@ header {
   color: var(--color-accent);
 }
 
-
 @media (max-width: 768px) {
   .headerContent {
     height: 70px;

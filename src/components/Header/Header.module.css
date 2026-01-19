@@ -69,13 +69,6 @@ header {
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
-.ctaButton {
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9375rem;
-  color: #000000;
-  background: #fd7902;
-}
-
 .mobileMenuButton {
   display: none;
   background: none;
@@ -84,10 +77,6 @@ header {
   cursor: pointer;
   padding: 0.5rem;
   transition: color 0.3s ease;
-}
-
-.mobileMenuButton:hover {
-  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {
@@ -105,3 +94,5 @@ header {
     display: none;
   }
 }
+
+

@@ -5,7 +5,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Globe,
 } from 'lucide-react';
 
 import styles from './Footer.module.css';
@@ -35,7 +34,11 @@ const Footer = () => {
           <div className={styles.brandColumn}>
             <h3 className={styles.brandLogo}>
               <div className={styles.logoIconBox}>
-                <img src="/headerLogo.svg" alt="OnDrive Logo" />
+                <img
+                  src="/headerLogo.svg"
+                  style={{ width: '60px', height: '60px', borderRadius: '30%' }}
+                  alt="OnDrive Logo"
+                />
               </div>
 
               <span style={{ fontStyle: 'italic' }}>OnDrive</span>

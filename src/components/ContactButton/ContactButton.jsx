@@ -13,7 +13,8 @@ const ContactButton = () => {
     <div className={styles.wrapper}>
       <div className={`${styles.menu} ${isOpen ? styles.menuOpen : ''}`}>
         <a
-          href="viber://chat?number=380000000000"
+          href="viber://chat?number=tel:+380632161386"
+          target="_blank"
           className={styles.link}
           style={{ '--delay': '0s' }}
         >
@@ -22,7 +23,7 @@ const ContactButton = () => {
         </a>
 
         <a
-          href="https://t.me/your_username"
+          href="https://t.me/VoFkA146"
           target="_blank"
           rel="noreferrer"
           className={styles.link}
@@ -33,7 +34,7 @@ const ContactButton = () => {
         </a>
 
         <a
-          href="https://instagram.com/your_instagram"
+          href="https://www.instagram.com/runndrive.ua/"
           target="_blank"
           rel="noreferrer"
           className={styles.link}

@@ -1,7 +1,7 @@
 import styles from './MobileMenu.module.css';
 import { navLinks } from '../../data/NavLinks';
 
-export default function MobileMenu({isOpen, onNavClick}) {
+export default function MobileMenu({ isOpen, onNavClick }) {
   return (
     <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`}>
       {navLinks.map(link => (
@@ -15,13 +15,13 @@ export default function MobileMenu({isOpen, onNavClick}) {
         </a>
       ))}
 
-      <a href="tel:+380991112233" className={styles.phoneLink}>
-        +38 (111) 111-11-111
+      <a href="tel:+380632161386" className={styles.phoneLink}>
+        +38 (063) 216-13-87
       </a>
 
       <a
         href="#contact"
-        className={`btn btn-primary ${styles.ctaButton}`}
+        className={styles.ctaButton}
         onClick={e => onNavClick(e, '#contact')}
       >
         Залишити заявку

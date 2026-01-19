@@ -21,13 +21,12 @@ export default function Header() {
                 alt="OnDrive logo"
               />
             </div>
-            {/* <span className={styles.logoText}>OnDrive</span> */}
           </a>
 
           <MobileMenu
             isOpen={isMobileMenuOpen}
             onNavClick={closeMenu}
-            phoneNumber="+38 (111) 111-11-111"
+            phoneNumber="+38 (063) 216-13-87"
           />
 
           <button className={styles.mobileMenuButton} onClick={toggleMenu}>

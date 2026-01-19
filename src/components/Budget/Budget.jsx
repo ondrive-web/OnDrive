@@ -34,7 +34,6 @@ export default function BudgetSection() {
 
           <div className={styles.contentArea}>
             {budgetData.map((item, index) => (
-              //!Рендеримо всі, але показуємо лише активний для анімації
               <div
                 key={item.id}
                 className={`${styles.contentItem} ${activeTab === index ? styles.show : ''}`}
@@ -45,7 +44,6 @@ export default function BudgetSection() {
                     alt={item.title}
                     className={styles.image}
                   />
-                  <div className={styles.priceTag}>{item.range}</div>
                 </div>
 
                 <div className={styles.info}>

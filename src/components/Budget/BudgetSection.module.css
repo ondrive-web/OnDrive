@@ -153,19 +153,6 @@
   transform: scale(1.05);
 }
 
-.priceTag {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 10px 20px;
-  border-radius: 12px;
-  font-weight: 800;
-  color: #0f172a;
-  backdrop-filter: blur(8px);
-  border-left: 5px solid #fd7902;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
 
 .info {
   flex: 1;
@@ -220,9 +207,7 @@
   border-radius: 50px;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2);
 }
 
 .ctaButton:hover {
@@ -230,6 +215,7 @@
   color: white;
   box-shadow: 0 10px 25px rgba(253, 121, 2, 0.3); 
   transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (max-width: 900px) {

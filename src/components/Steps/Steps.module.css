@@ -1,6 +1,6 @@
 .section {
-  background-color: #ffff; /* Легкий теплий фон */
-  padding: 100px 20px;       /* Нормальні відступи */
+  background-color: #ffff;
+  padding: 100px 20px; 
   font-family: system-ui, sans-serif;
 }
 
@@ -13,7 +13,6 @@
   gap: 60px;
 }
 
-/* --- ТЕКСТ --- */
 .content {
   flex: 1;
   max-width: 500px;
@@ -89,7 +88,6 @@
   box-shadow: 0 5px 15px rgba(253, 121, 2, 0.2);
 }
 
-/* --- ДОКУМЕНТ --- */
 .visual {
   flex: 1;
   display: flex;
@@ -103,11 +101,10 @@
   padding: 40px;
   border-radius: 12px;
   box-shadow: 
-    0 20px 40px -10px rgba(0,0,0,0.08), /* Тінь */
-    0 0 0 1px rgba(0,0,0,0.03);        /* Контур */
+    0 20px 40px -10px rgba(0,0,0,0.08),
+    0 0 0 1px rgba(0,0,0,0.03);      
   position: relative;
   
-  /* Ефект другого листка знизу через псевдоелемент - економія HTML */
   transform: rotate(-2deg);
 }
 
@@ -141,7 +138,7 @@
 .accentLine {
   height: 8px;
   width: 100%;
-  background: rgba(253, 121, 2, 0.2); /* Помаранчевий маркер */
+  background: rgba(253, 121, 2, 0.2); 
   margin-bottom: 14px;
   border-radius: 4px;
 }
@@ -158,10 +155,8 @@
   letter-spacing: 2px;
   transform: rotate(-10deg);
   opacity: 0.8;
-  float: right;
 }
 
-/* АДАПТИВ */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -170,7 +165,7 @@
   }
   
   .list li {
-    justify-content: center; /* Центруємо список на мобільному */
+    justify-content: center; 
   }
   
   .visual {

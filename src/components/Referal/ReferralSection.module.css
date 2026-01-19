@@ -35,7 +35,6 @@
   line-height: 1.5;
 }
 
-/* --- Картки --- */
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -56,12 +55,9 @@
   overflow: hidden;
 }
 
-/* Спеціальний стиль для популярної картки */
 .popularCard {
-  /* --- NEW ACCENT: Яскрава рамка --- */
   border: 2px solid #edff00; 
   transform: translateY(-10px);
-  /* Світіння лаймовим кольором */
   box-shadow: 0 20px 40px rgba(237, 255, 0, 0.15); 
 }
 
@@ -72,7 +68,6 @@
 .iconWrapper {
   width: 60px;
   height: 60px;
-  /* --- NEW ACCENT: Темний фон + Лаймова іконка --- */
   background: #4a403a; 
   color: #edff00;
   border-radius: 50%;
@@ -80,7 +75,6 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px auto;
-  /* Легка тінь */
   box-shadow: 0 5px 15px rgba(74, 64, 58, 0.2);
 }
 
@@ -112,11 +106,10 @@
   margin: 0 auto;
 }
 
-/* --- Кнопка --- */
 .ctaButton {
   background: #4a403a;
   color: #ffffff;
-  border: 2px solid transparent; /* Готуємо місце під рамку */
+  border: 2px solid transparent; 
   padding: 16px 48px;
   border-radius: 50px;
   font-size: 1.1rem;
@@ -126,16 +119,14 @@
   box-shadow: 0 10px 20px rgba(74, 64, 58, 0.2);
 }
 
-/* --- NEW ACCENT: Ховер ефект --- */
 .ctaButton:hover {
-  background: #4a403a;   /* Фон лишається темним */
-  color: #edff00;        /* Текст стає лаймовим */
-  border-color: #edff00; /* Рамка лаймова */
-  box-shadow: 0 0 20px rgba(237, 255, 0, 0.3); /* Світіння */
+  background: #4a403a;  
+  color: #edff00;       
+  border-color: #edff00; 
+  box-shadow: 0 0 20px rgba(237, 255, 0, 0.3); 
   transform: translateY(-2px);
 }
 
-/* Мобільна адаптація */
 @media (max-width: 768px) {
   .title {
     font-size: 2rem;

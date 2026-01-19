@@ -17,7 +17,6 @@ export default function AuctionsSection() {
               className={styles.card}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {/* Передня частина */}
               <div className={styles.front}>
                 <img
                   src={auction.logo}
@@ -27,7 +26,6 @@ export default function AuctionsSection() {
                 />
               </div>
 
-              {/* Оверлей при наведенні */}
               <div className={styles.overlay}>
                 <h3 className={styles.name}>{auction.name}</h3>
                 <p className={styles.desc}>{auction.description}</p>

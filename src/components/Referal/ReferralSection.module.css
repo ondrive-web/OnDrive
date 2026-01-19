@@ -1,7 +1,7 @@
 .section {
-  background-color: #f3f4f6;
+  background-color: #f8fafc; /* Світлий, чистий фон */
   padding: 100px 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .container {
@@ -20,21 +20,23 @@
 
 .title {
   font-size: 2.5rem;
-  color: #4a403a;
+  color: #0f172a; /* Темний колір */
   margin-bottom: 16px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .highlight {
-  color: #dfa878;
+  color: #fd7902; /* Помаранчевий акцент */
 }
 
 .subtitle {
-  color: #8c8177;
+  color: #64748b; /* Спокійний сірий */
   font-size: 1.1rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
+/* --- Сітка карток --- */
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -45,85 +47,106 @@
 
 .card {
   background: #ffffff;
-  border-radius: 20px;
-  padding: 40px 30px;
+  border-radius: 24px; /* Більше скруглення */
+  padding: 50px 30px;  /* Більше простору всередині */
   text-align: center;
-  box-shadow: 0 10px 30px rgba(166, 145, 129, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  
+  /* Чиста тінь */
+  box-shadow: 
+    0 10px 30px -5px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(0,0,0,0.02);
+    
+  border: 1px solid transparent; /* Резервуємо місце під рамку */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
 
-.popularCard {
-  border: 2px solid #edff00; 
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(237, 255, 0, 0.15); 
-}
-
+/* Ефект при наведенні на звичайну картку */
 .card:hover {
   transform: translateY(-10px);
+  border-color: rgba(253, 121, 2, 0.3); /* Легка помаранчева рамка */
+  box-shadow: 0 20px 40px -10px rgba(253, 121, 2, 0.15); /* Помаранчеве світіння */
 }
 
+/* --- Акцентна (Популярна) картка --- */
+.popularCard {
+  border: 2px solid #fd7902; /* Помаранчева рамка */
+  transform: translateY(-10px); /* Вона завжди трохи вище */
+  box-shadow: 0 25px 50px -12px rgba(253, 121, 2, 0.2); /* Постійне світіння */
+}
+
+.popularCard:hover {
+  transform: translateY(-15px); /* Піднімається ще вище */
+  box-shadow: 0 30px 60px -12px rgba(253, 121, 2, 0.3);
+}
+
+/* --- Елементи картки --- */
 .iconWrapper {
-  width: 60px;
-  height: 60px;
-  background: #4a403a; 
-  color: #edff00;
+  width: 64px;
+  height: 64px;
+  
+  /* Помаранчевий фон, біла іконка */
+  background: #fd7902; 
+  color: #ffffff;
+  
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px auto;
-  box-shadow: 0 5px 15px rgba(74, 64, 58, 0.2);
+  box-shadow: 0 10px 20px rgba(253, 121, 2, 0.3); /* Тінь під іконкою */
 }
 
 .iconWrapper svg {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
 }
 
 .tierCount {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  color: #8c8177;
-  letter-spacing: 0.05em;
-  margin-bottom: 10px;
+  color: #fd7902; /* Помаранчевий напис */
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
 .tierPrice {
-  font-size: 3rem;
-  color: #4a403a;
-  margin: 0 0 10px 0;
+  font-size: 3.5rem;
+  color: #0f172a; /* Темна ціна */
+  margin: 0 0 12px 0;
   font-weight: 800;
+  line-height: 1;
 }
 
 .tierSubtext {
-  font-size: 0.95rem;
-  color: #8c8177;
-  max-width: 200px;
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 240px;
   margin: 0 auto;
+  line-height: 1.5;
 }
 
+/* --- Кнопка (така ж як всюди) --- */
 .ctaButton {
-  background: #4a403a;
+  background: #0f172a; /* Темна */
   color: #ffffff;
-  border: 2px solid transparent; 
+  border: none; 
   padding: 16px 48px;
   border-radius: 50px;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(74, 64, 58, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .ctaButton:hover {
-  background: #4a403a;  
-  color: #edff00;       
-  border-color: #edff00; 
-  box-shadow: 0 0 20px rgba(237, 255, 0, 0.3); 
+  background: #fd7902;     /* Стає помаранчевою */
+  color: #ffffff;          /* Текст залишається білим */
+  box-shadow: 0 15px 30px rgba(253, 121, 2, 0.3); /* Світіння */
   transform: translateY(-2px);
 }
 
@@ -135,6 +158,13 @@
     padding: 30px 20px;
   }
   .popularCard {
-    transform: none; 
+    transform: none; /* На мобільному прибираємо зсув, щоб не ламало сітку */
+    margin-bottom: 20px;
+  }
+  /* Додаємо відступ, щоб тінь не обрізалась */
+  .cardsGrid {
+     padding: 10px; 
+     margin: 0 -10px 60px -10px;
+     width: calc(100% + 20px);
   }
 }

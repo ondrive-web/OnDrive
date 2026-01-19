@@ -1,0 +1,118 @@
+.section {
+  background-color: #f8fafc;
+  padding: 100px 20px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 60px;
+  letter-spacing: -0.5px;
+}
+
+.highlight {
+  color: #fd7902;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 24px;
+  text-align: center;
+  border: 1px solid #f1f5f9;
+
+  box-shadow:
+    0 10px 30px -5px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(0, 0, 0, 0.02);
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(253, 121, 2, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(253, 121, 2, 0.15);
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.reviewText {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.ctaWrapper {
+  margin-top: 20px;
+}
+
+.ctaButton {
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ctaButton:hover {
+  background: #fd7902;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(253, 121, 2, 0.3);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 30px 20px;
+  }
+}

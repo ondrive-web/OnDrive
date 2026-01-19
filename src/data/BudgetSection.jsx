@@ -5,7 +5,7 @@ export const budgetData = [
     title: 'Бюджетний старт',
     models: 'Ford Focus, Volkswagen Jetta, Hyundai Elantra (2015-2017)',
     desc: 'Чудовий варіант для першого авто або робочої конячки. Зазвичай це авто з пробігом 100-150 тис. км та мінімальними пошкодженнями.',
-    image: '../../public/images/budget/2015-volkswagen-jetta-first-drive-review-car-and-driver-photo-630148-s-original.webp',
+    image: '../../public/images/budget/car-white-jetta.webp',
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const budgetData = [
     title: 'Золота середина',
     models: 'Ford Fusion, VW Passat, Jeep Compass (2017-2019)',
     desc: 'Найпопулярніший сегмент. Можна розраховувати на свіжі седани бізнес-класу або компактні кросовери в гарній комплектації.',
-    image: '../../public/images/budget/2018-Ford-Fusion-Sedan-image-08-800.webp',
+    image: '../../public/images/budget/car-gray-ford.webp',
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const budgetData = [
     title: 'Сучасні кросовери',
     models: 'Mazda CX-5, Toyota Camry, Nissan Rogue (2018-2021)',
     desc: 'Свіжі роки випуску, багаті комплектації та мінімальні пробіги. Ідеальний вибір для сімейного авто з високим рівнем безпеки.',
-    image: '../../public/images/budget/istockphoto-1456523075-612x612.webp',
+    image: '../../public/images/budget/car-gray-ford.webp',
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const budgetData = [
     title: 'Преміум та Електро',
     models: 'Tesla Model 3, BMW 3-series, Audi Q5 (2019+)',
     desc: 'Вхід у світ преміум-класу або перехід на електротягу. Автомобілі з найсучаснішими технологіями та високим статусом.',
-    image: '../../public/images/budget/side-view-1840963880_600x400.webp',
+    image: '../../public/images/budget/card-white-bmw-side.webp',
   },
   {
     id: 5,
@@ -37,6 +37,6 @@ export const budgetData = [
     title: 'Люкс та Ексклюзив',
     models: 'BMW X5, Audi Q8, Mercedes GLE, Porsche Macan',
     desc: 'Максимальний комфорт та потужність. Практично нові автомобілі з мінімальними пошкодженнями або цілі авто з Manheim.',
-    image: '../../public/images/budget/istockphoto-2081018702-612x612.jpg',
+    image: '../../public/images/budget/car-white-bmw.jpg',
   },
 ];

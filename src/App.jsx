@@ -7,6 +7,7 @@ import BudgetSection from './components/Budget/Budget';
 import Steps from './components/Steps/Steps';
 import ReferralSection from './components/Referal/Referal';
 import Footer from './components/Footer/Footer';
+import Reviews from './components/Reviews/Reviews';
 
 // Contact BTN
 import ContactButton from './components/ContactButton/ContactButton';
@@ -22,6 +23,8 @@ function App() {
       <BudgetSection />
       <Steps />
       <ReferralSection />
+      <Reviews />
+
       <Footer />
 
       {/*  */}

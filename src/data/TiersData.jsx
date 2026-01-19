@@ -3,7 +3,7 @@ export const tiersData = [
     id: 1,
     title: 'Початківець',
     count: '1-3 клієнти',
-    price: '$300',
+    price: '$200',
     subtext: 'за кожну успішну угоду',
     icon: (
       <svg
@@ -26,7 +26,7 @@ export const tiersData = [
     id: 2,
     title: 'Партнер',
     count: 'від 4-го клієнта',
-    price: '$500',
+    price: '$400',
     subtext: 'підвищений бонус + пріоритет',
     isPopular: true,
     icon: (
@@ -50,7 +50,7 @@ export const tiersData = [
     id: 3,
     title: 'VIP Ексклюзив',
     count: 'Топ-партнери',
-    price: 'до $1000',
+    price: 'до $800',
     subtext: 'індивідуальні умови та % від оберту',
     icon: (
       <svg

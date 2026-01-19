@@ -54,47 +54,27 @@
   background-color: #fd7902;
   color: #ffffff;
   border: none;
-  border-radius: 50px; 
+  border-radius: 50px;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.5px;
-  text-decoration: none; 
-
+  text-decoration: none;
   cursor: pointer;
-
-  /* М'яка тінь з відтінком кнопки */
-  box-shadow: 0 4px 10px rgba(253, 121, 2, 0.25);
-
-  /* Дуже плавна анімація */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  position: relative;
-  overflow: hidden;
 }
 
-/* Ховер: Кнопка трохи піднімається і тінь стає яскравішою */
 .ctaButton:hover {
-  background-color: #ff8514; /* Трохи світліший для "світіння" */
+  background-color: #ff8514;
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(253, 121, 2, 0.4);
 }
 
-/* Активний стан (клік): Кнопка вдавлюється */
 .ctaButton:active {
   transform: translateY(1px);
-  background-color: #e56d00; /* Трохи темніший при натисканні */
+  background-color: #e56d00;
   box-shadow: 0 2px 5px rgba(253, 121, 2, 0.2);
 }
 
-/* Опціонально: стан Disable */
-.ctaButton:disabled {
-  background-color: #cbd5e1;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-/* Mobile styles */
 @media (max-width: 768px) {
   .nav {
     position: fixed;

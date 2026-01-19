@@ -18,7 +18,7 @@ export default function Header() {
               <img
                 style={{ width: '60px', height: '60px', borderRadius: '30%' }}
                 src="/headerLogo.svg"
-                alt="OnDrive logo"
+                alt="Run&Drive logo"
               />
             </div>
           </a>

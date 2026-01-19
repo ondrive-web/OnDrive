@@ -37,11 +37,11 @@ const Footer = () => {
                 <img
                   src="/headerLogo.svg"
                   style={{ width: '60px', height: '60px', borderRadius: '30%' }}
-                  alt="OnDrive Logo"
+                  alt="Run&Drive Logo"
                 />
               </div>
 
-              <span style={{ fontStyle: 'italic' }}>OnDrive</span>
+              <span style={{ fontStyle: 'italic' }}>Run&Drive</span>
             </h3>
             <p className={`${styles.subscribeText} ${styles.brandDesc}`}>
               Повний супровід купівлі авто з-за кордону. Ми беремо на себе
@@ -116,10 +116,10 @@ const Footer = () => {
                   <Mail size={16} />
                 </div>
                 <a
-                  href="mailto:sales@ondrive.ua"
+                  href="mailto:sales@Run&Drive.ua"
                   className={`${styles.contactText} ${styles.contactLink}`}
                 >
-                  sales@ondrive.ua
+                  sales@Run&Drive.ua
                 </a>
               </li>
             </ul>
@@ -128,7 +128,7 @@ const Footer = () => {
 
         <div className={styles.bottomBar}>
           <p>
-            © {currentYear} OnDrive. Імпорт автомобілів з США, Канади та Кореї.
+            © {currentYear} Run&Drive. Імпорт автомобілів з США, Канади та Кореї.
           </p>
           <div className={styles.legalLinks}>
             <a href="#" className={styles.legalLink}>

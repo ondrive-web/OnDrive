@@ -1,266 +1,179 @@
 .section {
-  background-color: #ffffff;
-  padding: 100px 20px;
-  font-family: 'Inter', sans-serif;
-  overflow: hidden;
+  background-color: #ffff; /* Легкий теплий фон */
+  padding: 100px 20px;       /* Нормальні відступи */
+  font-family: system-ui, sans-serif;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 60px;
-  flex-wrap: wrap;
 }
 
-/* --- Ліва сторона (Контент) --- */
-.contentSide {
+/* --- ТЕКСТ --- */
+.content {
   flex: 1;
-  min-width: 300px;
+  max-width: 500px;
 }
 
 .title {
   font-size: 2.5rem;
-  color: #4a403a;
-  margin-bottom: 20px;
   font-weight: 800;
-  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 20px;
+  line-height: 1.1;
 }
 
 .highlight {
-  color: #dfa878;
+  color: #fd7902;
   white-space: nowrap;
 }
 
-.subtitle {
+.description {
   font-size: 1.1rem;
-  color: #8c8177;
-  margin-bottom: 40px;
-  line-height: 1.6;
+  color: #64748b;
+  margin-bottom: 30px;
+  line-height: 1.5;
 }
 
-.benefitsList {
+.list {
   list-style: none;
   padding: 0;
   margin: 0 0 40px 0;
-}
-
-.benefitItem {
   display: flex;
+  flex-direction: column;
   gap: 16px;
-  margin-bottom: 24px;
 }
 
-/* --- NEW ACCENT: Галочки --- */
-.checkIcon {
-  flex-shrink: 0;
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 24px;
   height: 24px;
-  background: #4a403a; /* Темний фон (корпоративний) */
-  color: #edff00;      /* Яскрава лаймова галочка */
+  background: #fd7902;
+  color: white;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
   font-size: 14px;
-  /* Легка тінь для об'єму */
-  box-shadow: 0 4px 10px rgba(74, 64, 58, 0.2);
+  flex-shrink: 0;
 }
 
-.benefitText {
-  color: #4a403a;
-  line-height: 1.5;
-  font-size: 1rem;
-}
-
-/* --- NEW ACCENT: Кнопка --- */
-.downloadButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: transparent;
-  color: #dfa878; /* В спокої - спокійна */
-  border: 2px solid rgba(223, 168, 120, 0.3);
-  padding: 14px 28px;
+.button {
+  background: transparent;
+  color: #fd7902;
+  border: 2px solid rgba(253, 121, 2, 0.3);
+  padding: 14px 32px;
   border-radius: 50px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: inherit;
+  transition: all 0.2s ease;
 }
 
-/* Ховер ефект як у попередній секції */
-.downloadButton:hover {
-  background-color: #4a403a; /* Темний фон */
-  border-color: #edff00;     /* Яскрава рамка */
-  color: #edff00;            /* Яскравий текст */
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(237, 255, 0, 0.15);
+.button:hover {
+  background: #fd7902;
+  color: white;
+  border-color: #fd7902;
+  box-shadow: 0 5px 15px rgba(253, 121, 2, 0.2);
 }
 
-.icon {
-  font-size: 1.2rem;
-}
-
-/* --- Права сторона (Візуал) --- */
-.visualSide {
+/* --- ДОКУМЕНТ --- */
+.visual {
   flex: 1;
-  min-width: 300px;
-  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 40px 0;
 }
 
-.blob {
-  position: absolute;
-  width: 400px;
+.docCard {
+  width: 300px;
   height: 400px;
-  background: #f9f7f2;
-  border-radius: 50%;
-  z-index: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.documentCard {
-  position: relative;
-  width: 320px;
-  height: 420px;
-  background: #ffffff;
-  border-radius: 4px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  background: white;
   padding: 40px;
-  z-index: 1;
-  transform: rotate(-3deg);
-  transition: transform 0.4s ease;
-  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 
+    0 20px 40px -10px rgba(0,0,0,0.08), /* Тінь */
+    0 0 0 1px rgba(0,0,0,0.03);        /* Контур */
+  position: relative;
+  
+  /* Ефект другого листка знизу через псевдоелемент - економія HTML */
+  transform: rotate(-2deg);
 }
 
-.documentCard:hover {
-  transform: rotate(0deg) scale(1.02);
+.docCard::before {
+  content: '';
+  position: absolute;
+  top: 5px; left: 5px; right: -5px; bottom: -5px;
+  background: white;
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0.6;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transform: rotate(4deg);
 }
 
 .docHeader {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 15px;
-  margin-bottom: 30px;
-}
-
-.docTitle {
   font-weight: 800;
-  color: #4a403a;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  color: #0f172a;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 15px;
 }
 
-.docDate {
-  color: #aaa;
-  font-size: 0.8rem;
-}
-
-.docLines .line {
+.line {
   height: 8px;
-  background: #f5f5f5;
-  margin-bottom: 12px;
+  background: #f1f5f9;
+  margin-bottom: 14px;
   border-radius: 4px;
 }
 
-/* --- NEW ACCENT: Ефект маркера --- */
-/* Робимо другу лінію "підсвіченою" маркером */
-.docLines .line:nth-child(2) {
-  background-color: rgba(237, 255, 0, 0.5); /* Напівпрозорий лайм */
-  width: 95% !important; /* Трохи довша */
+.accentLine {
+  height: 8px;
+  width: 100%;
+  background: rgba(253, 121, 2, 0.2); /* Помаранчевий маркер */
+  margin-bottom: 14px;
+  border-radius: 4px;
 }
 
 .stamp {
-  position: absolute;
-  bottom: 40px;
-  right: 30px;
-  width: 100px;
-  height: 100px;
-  border: 3px solid #dfa878;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #dfa878;
-  font-weight: 900;
-  font-size: 0.9rem;
-  transform: rotate(-15deg);
+  margin-top: 60px;
+  border: 2px solid #fd7902;
+  color: #fd7902;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  transform: rotate(-10deg);
   opacity: 0.8;
-  mask-image: url("data:image/svg+xml;utf8,<svg...>"), none;
-  
-  animation: stampIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation-delay: 0.5s;
-  opacity: 0;
+  float: right;
 }
 
-/* Печатку краще залишити помаранчевою, бо лаймова на білому папері буде нечитабельною */
-
-.stamp span {
-  font-size: 0.6rem;
-  font-weight: 400;
-  margin-top: 4px;
-  text-transform: uppercase;
-}
-
-.clip {
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  width: 15px;
-  height: 40px;
-  background: #8c8177;
-  border-radius: 10px;
-  z-index: 2;
-  opacity: 0.5;
-}
-
-@keyframes stampIn {
-  0% {
-    opacity: 0;
-    transform: scale(2) rotate(10deg);
-  }
-  100% {
-    opacity: 0.8;
-    transform: scale(1) rotate(-15deg);
-  }
-}
-
+/* АДАПТИВ */
 @media (max-width: 900px) {
   .container {
-    flex-direction: column-reverse;
-    gap: 40px;
-  }
-  
-  .title {
-    font-size: 2rem;
+    flex-direction: column;
+    gap: 50px;
     text-align: center;
   }
   
-  .subtitle {
-    text-align: center;
+  .list li {
+    justify-content: center; /* Центруємо список на мобільному */
   }
   
-  .visualSide {
+  .visual {
     width: 100%;
-  }
-
-  .contentSide {
-    width: 100%;
-  }
-  
-  .downloadButton {
-    width: 100%;
-    justify-content: center;
   }
 }

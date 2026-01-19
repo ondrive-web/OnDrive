@@ -4,74 +4,51 @@ export default function Steps() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.contentSide}>
+        
+        {/* ЛІВА ЧАСТИНА: Текст */}
+        <div className={styles.content}>
           <h2 className={styles.title}>
-            Працюємо виключно за{' '}
-            <span className={styles.highlight}>офіційним договором</span>
+            Працюємо за <span className={styles.highlight}>офіційним договором</span>
           </h2>
-          <p className={styles.subtitle}>
-            Ваша безпека — наш пріоритет. Жодних прихованих платежів чи усних
-            домовленостей.
+          <p className={styles.description}>
+            Жодних прихованих умов. Фіксуємо ціну, терміни та відповідальність юридично.
           </p>
 
-          <ul className={styles.benefitsList}>
-            <li className={styles.benefitItem}>
-              <div className={styles.checkIcon}>✓</div>
-              <div className={styles.benefitText}>
-                <strong>Фіксація бюджету.</strong> Вартість авто та послуг
-                прописана в договорі і не змінюється в процесі доставки.
-              </div>
+          <ul className={styles.list}>
+            <li>
+              <span className={styles.check}>✓</span>
+              Фіксація бюджету без доплат
             </li>
-            <li className={styles.benefitItem}>
-              <div className={styles.checkIcon}>✓</div>
-              <div className={styles.benefitText}>
-                <strong>Повна матеріальна відповідальність.</strong> Ми
-                відповідаємо за стан авто з моменту покупки на аукціоні до
-                вручення вам ключів.
-              </div>
+            <li>
+              <span className={styles.check}>✓</span>
+              Повна матеріальна відповідальність
             </li>
-            <li className={styles.benefitItem}>
-              <div className={styles.checkIcon}>✓</div>
-              <div className={styles.benefitText}>
-                <strong>Юридична чистота.</strong> Авто розмитнюється відразу на
-                вас. Ви — перший власник в Україні.
-              </div>
+            <li>
+              <span className={styles.check}>✓</span>
+              Авто розмитнюється відразу на вас
             </li>
           </ul>
 
-          <button className={styles.downloadButton}>
-            <span className={styles.icon}>📄</span>
-            Завантажити зразок договору (PDF)
+          <button className={styles.button}>
+            Завантажити зразок договору
           </button>
         </div>
 
-        <div className={styles.visualSide}>
-          <div className={styles.documentCard}>
-            <div className={styles.docHeader}>
-              <div className={styles.docTitle}>ДОГОВІР №2024/UA</div>
-              <div className={styles.docDate}>м. Київ</div>
-            </div>
-            <div className={styles.docLines}>
-              <div className={styles.line} style={{ width: '90%' }}></div>
-              <div className={styles.line} style={{ width: '85%' }}></div>
-              <div className={styles.line} style={{ width: '95%' }}></div>
-              <div className={styles.line} style={{ width: '60%' }}></div>
-              <br />
-              <div className={styles.line} style={{ width: '88%' }}></div>
-              <div className={styles.line} style={{ width: '92%' }}></div>
-              <div className={styles.line} style={{ width: '70%' }}></div>
-            </div>
-
-            <div className={styles.stamp}>
-              APPROVED
-              <span>Premium Auto</span>
-            </div>
-
-            <div className={styles.clip}></div>
+        {/* ПРАВА ЧАСТИНА: Візуал документа */}
+        <div className={styles.visual}>
+          <div className={styles.docCard}>
+            <div className={styles.docHeader}>ДОГОВІР №2024/UA</div>
+            {/* Імітація рядків */}
+            <div className={styles.line} style={{ width: '100%' }}></div>
+            <div className={styles.line} style={{ width: '90%' }}></div>
+            <div className={styles.line} style={{ width: '95%' }}></div>
+            <div className={styles.accentLine}></div> {/* Помаранчевий акцент */}
+            <div className={styles.line} style={{ width: '85%' }}></div>
+            
+            <div className={styles.stamp}>APPROVED</div>
           </div>
-
-          <div className={styles.blob}></div>
         </div>
+
       </div>
     </section>
   );

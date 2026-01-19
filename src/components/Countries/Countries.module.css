@@ -1,8 +1,10 @@
 .section {
   background-color: #f3f4f6;
-  padding: 10px 20px;
-  font-family: 'Inter', sans-serif;
-  overflow: hidden;
+  padding: 80px 20px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .container {
@@ -12,14 +14,15 @@
 }
 
 .title {
-  font-size: 2rem;
-  color: #4a403a;
+  font-size: 2.5rem;
+  color: #0f172a;
   margin-bottom: 50px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .highlight {
-  color: #dfa878;
+  color: #fd7902;
   position: relative;
   display: inline-block;
 }
@@ -28,9 +31,9 @@
   content: '';
   position: absolute;
   width: 100%;
-  height: 8px;
-  background: rgba(223, 168, 120, 0.2);
-  bottom: 2px;
+  height: 10px;
+  background: rgba(253, 121, 2, 0.15);
+  bottom: 4px;
   left: 0;
   z-index: -1;
   border-radius: 4px;
@@ -45,37 +48,36 @@
 
 .card {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 24px 16px;
-  width: 170px;
-  box-shadow: 0 10px 30px rgba(166, 145, 129, 0.1);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 180px;
+
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.02);
 
-  /* Анімація появи */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
   opacity: 0;
   animation: fadeInUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(166, 145, 129, 0.2);
-  border-color: #dfa878;
+  border-color: rgba(253, 121, 2, 0.3);
+  box-shadow: 0 20px 40px -5px rgba(253, 121, 2, 0.15);
 }
 
 .flagWrapper {
-  width: 64px;
-  height: 44px;
-  border-radius: 6px;
+  width: 70px;
+  height: 48px;
+  border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .flag {
@@ -86,13 +88,11 @@
 
 .name {
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #4a403a;
+  font-weight: 700;
+  color: #334155;
   margin: 0;
 }
 
-/* Глобальні keyframes працюють всередині модулів, 
-     але краще визначити їх тут або в глобальному файлі */
 @keyframes fadeInUp {
   from {
     opacity: 0;

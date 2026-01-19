@@ -1,6 +1,6 @@
 .section {
-  background-color: #ffff;
-  padding: 100px 20px; 
+  background-color: #fff;
+  padding: 100px 20px;
   font-family: system-ui, sans-serif;
 }
 
@@ -100,23 +100,25 @@
   background: white;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 
-    0 20px 40px -10px rgba(0,0,0,0.08),
-    0 0 0 1px rgba(0,0,0,0.03);      
+  box-shadow:
+    0 20px 40px -10px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.03);
   position: relative;
-  
   transform: rotate(-2deg);
 }
 
 .docCard::before {
   content: '';
   position: absolute;
-  top: 5px; left: 5px; right: -5px; bottom: -5px;
+  top: 5px;
+  left: 5px;
+  right: -5px;
+  bottom: -5px;
   background: white;
   border-radius: 12px;
   z-index: -1;
   opacity: 0.6;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transform: rotate(4deg);
 }
 
@@ -138,7 +140,7 @@
 .accentLine {
   height: 8px;
   width: 100%;
-  background: rgba(253, 121, 2, 0.2); 
+  background: rgba(253, 121, 2, 0.2);
   margin-bottom: 14px;
   border-radius: 4px;
 }
@@ -163,12 +165,77 @@
     gap: 50px;
     text-align: center;
   }
-  
+
   .list li {
-    justify-content: center; 
+    justify-content: center;
   }
-  
+
   .visual {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .highlight {
+    white-space: normal;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .list {
+    gap: 14px;
+  }
+
+  .list li {
+    font-size: 0.95rem;
+    align-items: flex-start;
+  }
+
+  .check {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  .docCard {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    padding: 24px;
+    transform: rotate(-1deg);
+  }
+
+  .docCard::before {
+    display: none;
+  }
+
+  .stamp {
+    margin-top: 40px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (hover: none) {
+  .button:hover {
+    background: transparent;
+    color: #fd7902;
+    border-color: rgba(253, 121, 2, 0.3);
+    box-shadow: none;
   }
 }

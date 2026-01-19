@@ -11,14 +11,10 @@
 
 .sliderWrapper {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: 0;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-
   border-radius: 0 0 10px 10px;
 }
 
@@ -36,7 +32,7 @@
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(0, 0, 0, 0.75) 100%
   );
   z-index: 1;
   pointer-events: none;
@@ -66,7 +62,6 @@
   color: transparent;
 
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
-
   margin-bottom: 30px;
 }
 
@@ -75,11 +70,13 @@
   font-size: clamp(1rem, 2vw, 18px);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
+
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 20px 30px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+
   margin-bottom: 40px;
   max-width: 700px;
   animation: fadeInUp 1s ease-out 0.2s both;
@@ -88,23 +85,23 @@
 .ctaButton {
   display: inline-flex;
   align-items: center;
-
-  padding: 12px 28px;
+  justify-content: center;
   gap: 12px;
 
+  padding: 14px 36px;
   background-color: #fd7902;
   color: #ffffff;
   border: none;
   border-radius: 50px;
+
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.5px;
-
-  text-decoration: none;
   text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
 
+  cursor: pointer;
+  transition: all 0.3s ease;
   animation: fadeInUp 1s ease-out 0.4s both;
 }
 
@@ -113,6 +110,7 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(253, 121, 2, 0.4);
 }
+
 
 @keyframes fadeInUp {
   from {
@@ -125,16 +123,76 @@
   }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 75vh;
+  }
+
+  .contentContainer {
+    margin-top: 80px;
+  }
+
+  .subtitle {
+    padding: 18px 24px;
+  }
+}
+
+
+@media (max-width: 600px) {
   .hero {
     min-height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
+
   .sliderWrapper {
-    height: 70vh;
-    position: absolute;
+    height: 65vh;
   }
+
   .contentContainer {
-    margin-top: 100px;
+    margin-top: 90px;
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5));
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    padding: 16px 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(6px);
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 0;
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (hover: none) {
+  .ctaButton:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: #fd7902;
   }
 }

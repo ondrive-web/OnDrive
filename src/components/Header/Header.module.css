@@ -3,8 +3,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
   z-index: 100;
+  background-color: transparent;
+
+  padding-top: env(safe-area-inset-top);
 }
 
 .headerContent {
@@ -13,20 +15,29 @@ header {
   justify-content: space-between;
   height: 80px;
   gap: var(--spacing-lg);
+  padding: 0 20px;
+}
+
+/* ---------- LOGO ---------- */
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
 }
 
 .logoIcon img {
   width: 60px;
   height: 60px;
   border-radius: 30%;
-  transition: transform 0.3s ease;
-
   animation: pulseGlow 3s infinite;
 }
 
 @keyframes pulseGlow {
   0% {
-    box-shadow: 0 0 0 0 rgba(253, 121, 2, 0.4);
+    box-shadow: 0 0 0 0 rgba(253, 121, 2, 0.35);
   }
   70% {
     box-shadow: 0 0 0 10px rgba(253, 121, 2, 0);
@@ -36,21 +47,11 @@ header {
   }
 }
 
-.logo:hover {
-  color: var(--color-accent);
-}
-
-.logoIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
 .logo:hover .logoIcon {
   transform: scale(1.1);
 }
+
+/* ---------- PHONE LINK ---------- */
 
 .phoneLink {
   background: rgba(255, 255, 255, 0.1);
@@ -60,10 +61,15 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   font-weight: 600;
-  padding: 10px 24px;
+
+  padding: 12px 26px;
   border-radius: 50px;
   text-decoration: none;
-  display: inline-block;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   transition: all 0.3s ease;
 }
 
@@ -73,28 +79,84 @@ header {
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
+/* ---------- MOBILE MENU BUTTON ---------- */
+
 .mobileMenuButton {
   display: none;
   background: none;
   border: none;
   color: #fd7902;
   cursor: pointer;
-  padding: 0.5rem;
+
+  padding: 10px;
+  margin-left: auto;
+  font-size: 1.4rem;
+
   transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .headerContent {
-    height: 70px;
-  }
+.mobileMenuButton:hover {
+  color: #ff8514;
+}
 
-  .mobileMenuButton {
-    display: block;
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1024px) {
+  .phoneLink {
+    display: none;
   }
 }
 
-@media (min-width: 765px) and (max-width: 1160px) {
-  .phoneLink {
-    display: none;
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .headerContent {
+    height: 64px;
+    padding: 0 16px;
+  }
+
+  .logoIcon img {
+    width: 48px;
+    height: 48px;
+    animation: none; /* экономия батареи */
+  }
+
+  .mobileMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 375px) {
+  .headerContent {
+    height: 56px;
+  }
+
+  .logoIcon img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ---------- TOUCH DEVICES ---------- */
+
+@media (hover: none) {
+  .logo:hover .logoIcon {
+    transform: none;
+  }
+
+  .phoneLink:hover {
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.15);
   }
 }

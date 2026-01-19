@@ -5,7 +5,6 @@ export default function Steps() {
     <section className={styles.section}>
       <div className={styles.container}>
         
-        {/* ЛІВА ЧАСТИНА: Текст */}
         <div className={styles.content}>
           <h2 className={styles.title}>
             Працюємо за <span className={styles.highlight}>офіційним договором</span>

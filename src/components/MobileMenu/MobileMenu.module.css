@@ -5,19 +5,19 @@
 }
 
 .navLink {
-  color: #ffff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   position: relative;
   white-space: nowrap;
-  transition: color 0.3s ease;
+  padding: 4px 0;
 }
 
 .navLink::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   left: 0;
   width: 0;
   height: 2px;
@@ -33,94 +33,133 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   font-weight: 600;
-  padding: 10px 24px;
+
+  padding: 10px 22px;
   border-radius: 50px;
   text-decoration: none;
-  display: inline-block;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   transition: all 0.3s ease;
 }
 
 .phoneLink:hover {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 .ctaButton {
-  padding: 12px 28px;
+  padding: 12px 30px;
   background-color: #fd7902;
   color: #ffffff;
-  border: none;
   border-radius: 50px;
+
   font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.5px;
+  font-size: 15px;
+  letter-spacing: 0.4px;
   text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.25s ease;
 }
 
 .ctaButton:hover {
   background-color: #ff8514;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(253, 121, 2, 0.4);
+  box-shadow: 0 10px 20px rgba(253, 121, 2, 0.35);
+  transform: translateY(-1px);
 }
 
-.ctaButton:active {
-  transform: translateY(1px);
-  background-color: #e56d00;
-  box-shadow: 0 2px 5px rgba(253, 121, 2, 0.2);
+@media (max-width: 1024px) {
+  .phoneLink {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   .nav {
     position: fixed;
-    top: 70px;
+    top: 64px;
     left: 0;
     right: 0;
-    background: #1a1a1a;
+
+    background: rgba(20, 20, 20, 0.95);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
     flex-direction: column;
     align-items: stretch;
-    padding: var(--spacing-lg);
-    gap: var(--spacing-sm);
-    border-bottom: 1px solid var(--color-border);
-    transform: translateY(-100%);
+    gap: 12px;
+
+    padding: 20px 16px;
+
+    transform: translateY(-20px);
     opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-lg);
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
 
-  .navOpen {
+  .nav.navOpen {
     transform: translateY(0);
     opacity: 1;
-    visibility: visible;
+    pointer-events: auto;
   }
 
   .navLink {
-    padding: var(--spacing-sm);
+    padding: 14px 0;
+    font-size: 1.1rem;
     text-align: center;
-    font-size: 1rem;
   }
 
   .navLink::after {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
+  }
+
+  .ctaButton {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px 0;
+    font-size: 16px;
   }
 
   .phoneLink {
     display: flex;
     justify-content: center;
+    margin-top: 6px;
+    padding: 14px 0;
   }
 }
 
-@media (min-width: 765px) and (max-width: 1160px) {
-  .phoneLink {
-    display: none;
+@media (max-width: 375px) {
+  .nav {
+    padding: 16px 14px;
+  }
+
+  .navLink {
+    font-size: 1rem;
+  }
+}
+
+@media (hover: none) {
+  .navLink:hover::after {
+    width: 0;
+  }
+
+  .ctaButton:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: #fd7902;
   }
 }

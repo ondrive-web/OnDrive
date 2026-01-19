@@ -77,25 +77,8 @@
   margin-top: 20px;
 }
 
-.ctaButton {
-  background: #0f172a;
-  color: #ffffff;
-  border: none;
-  padding: 16px 48px;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
 
-.ctaButton:hover {
-  background: #fd7902;
-  transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(253, 121, 2, 0.3);
-}
+
 
 @media (max-width: 768px) {
   .section {

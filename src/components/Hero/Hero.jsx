@@ -23,10 +23,16 @@ export default function Hero({ onCTAClick }) {
           <p className={styles.subtitle}>{t('hero.subtitle')}</p>
         </div>
 
-        <button className={styles.ctaButton} onClick={onCTAClick}>
+        <a
+          href="https://t.me/VoFkA146"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.ctaButton}
+          onClick={onCTAClick}
+        >
           {t('hero.cta_button')}
           <CircleArrowRight size={28} />
-        </button>
+        </a>
       </div>
     </section>
   );

@@ -53,8 +53,15 @@ export default function BudgetSection() {
                     <p className={styles.models}>{item.models}</p>
                   </div>
                   <p className={styles.desc}>{item.desc}</p>
-
-                  <button className={styles.ctaButton}>Розрахувати авто</button>
+                  
+                  <a
+                    href="https://t.me/VoFkA146"
+                    className={styles.ctaButton}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Розрахувати авто
+                  </a>
                 </div>
               </div>
             ))}

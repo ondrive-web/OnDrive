@@ -25,10 +25,6 @@ export default function Reviews() {
             </div>
           ))}
         </div>
-
-        <div className={styles.ctaWrapper}>
-          <button className={styles.ctaButton}>Залишити заявку</button>
-        </div>
       </div>
     </section>
   );

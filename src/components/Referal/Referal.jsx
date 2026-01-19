@@ -21,8 +21,6 @@ const ReferralSection = () => {
               key={tier.id}
               className={`${styles.card} ${tier.isPopular ? styles.popularCard : ''}`}
             >
-      
-
               <div className={styles.iconWrapper}>{tier.icon}</div>
 
               <div className={styles.tierInfo}>
@@ -34,7 +32,14 @@ const ReferralSection = () => {
           ))}
         </div>
 
-        <button className={styles.ctaButton}>Стати партнером</button>
+        <a
+          href="https://t.me/VoFkA146"
+          className={styles.ctaButton}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Стати партнером
+        </a>
       </div>
     </section>
   );

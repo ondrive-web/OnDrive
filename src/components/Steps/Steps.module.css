@@ -69,25 +69,6 @@
   flex-shrink: 0;
 }
 
-.button {
-  background: transparent;
-  color: #fd7902;
-  border: 2px solid rgba(253, 121, 2, 0.3);
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.button:hover {
-  background: #fd7902;
-  color: white;
-  border-color: #fd7902;
-  box-shadow: 0 5px 15px rgba(253, 121, 2, 0.2);
-}
-
 .visual {
   flex: 1;
   display: flex;

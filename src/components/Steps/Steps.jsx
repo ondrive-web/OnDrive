@@ -4,13 +4,14 @@ export default function Steps() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        
         <div className={styles.content}>
           <h2 className={styles.title}>
-            Працюємо за <span className={styles.highlight}>офіційним договором</span>
+            Працюємо за{' '}
+            <span className={styles.highlight}>офіційним договором</span>
           </h2>
           <p className={styles.description}>
-            Жодних прихованих умов. Фіксуємо ціну, терміни та відповідальність юридично.
+            Жодних прихованих умов. Фіксуємо ціну, терміни та відповідальність
+            юридично.
           </p>
 
           <ul className={styles.list}>
@@ -27,10 +28,6 @@ export default function Steps() {
               Авто розмитнюється відразу на вас
             </li>
           </ul>
-
-          <button className={styles.button}>
-            Завантажити зразок договору
-          </button>
         </div>
 
         <div className={styles.visual}>
@@ -39,13 +36,12 @@ export default function Steps() {
             <div className={styles.line} style={{ width: '100%' }}></div>
             <div className={styles.line} style={{ width: '90%' }}></div>
             <div className={styles.line} style={{ width: '95%' }}></div>
-            <div className={styles.accentLine}></div> 
+            <div className={styles.accentLine}></div>
             <div className={styles.line} style={{ width: '85%' }}></div>
-            
+
             <div className={styles.stamp}>APPROVED</div>
           </div>
         </div>
-
       </div>
     </section>
   );

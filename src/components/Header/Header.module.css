@@ -7,12 +7,6 @@ header {
   z-index: 100;
 }
 
-.header.scrolled {
-  background: inherit;
-  border-bottom-color: var(--color-border);
-  box-shadow: var(--shadow-md);
-}
-
 .headerContent {
   display: flex;
   align-items: center;
@@ -21,15 +15,25 @@ header {
   gap: var(--spacing-lg);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  text-decoration: none;
-  color: var(--color-text-primary);
-  font-weight: 900;
-  font-size: 30px;
-  transition: all 0.3s ease;
+.logoIcon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+  transition: transform 0.3s ease;
+
+  animation: pulseGlow 3s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(253, 121, 2, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(253, 121, 2, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(253, 121, 2, 0);
+  }
 }
 
 .logo:hover {
@@ -94,5 +98,3 @@ header {
     display: none;
   }
 }
-
-

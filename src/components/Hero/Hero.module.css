@@ -88,25 +88,30 @@
 .ctaButton {
   display: inline-flex;
   align-items: center;
+
+  padding: 12px 28px;
   gap: 12px;
-  background-color: #dbeafe;
-  color: #000;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  padding: 16px 32px;
-  border-radius: 50px;
+
+  background-color: #fd7902;
+  color: #ffffff;
   border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+
+  text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
   animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .ctaButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
+  background-color: #ff8514;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(253, 121, 2, 0.4);
 }
 
 @keyframes fadeInUp {

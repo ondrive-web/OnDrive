@@ -1,7 +1,10 @@
 .switcherContainer {
   position: relative;
   display: inline-block;
-  font-family: inherit;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .triggerButton {
@@ -20,8 +23,13 @@
 }
 
 .triggerButton:hover {
-  border-color: #94a3b8;
-  background-color: #f8fafc;
+  border-color: #fd7902;
+  color: #fd7902;
+  background-color: #fffbf7;
+}
+
+.triggerButton:hover .arrow {
+  border-top-color: #fd7902;
 }
 
 .arrow {
@@ -30,7 +38,9 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #64748b;
-  transition: transform 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-top-color 0.2s ease;
 }
 
 .arrowOpen {
@@ -45,10 +55,9 @@
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 10px 15px -3px rgba(253, 121, 2, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  min-width: 120px;
-  z-index: 50;
+  min-width: 140px;
   overflow: hidden;
   animation: fadeIn 0.2s ease-out;
 }
@@ -65,22 +74,24 @@
   cursor: pointer;
   font-size: 14px;
   color: #475569;
-  transition: background 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .option:hover {
-  background-color: #f1f5f9;
-  color: #0f172a;
+  background-color: #fff7ed;
+  color: #fd7902;
 }
 
 .activeOption {
-  background-color: #eff6ff;
-  color: #2563eb;
+  background-color: rgba(253, 121, 2, 0.12);
+  color: #fd7902;
   font-weight: bold;
 }
 
 .flag {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 @keyframes fadeIn {

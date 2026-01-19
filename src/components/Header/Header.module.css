@@ -48,11 +48,6 @@ header {
   transform: scale(1.1);
 }
 
-.logoText {
-  white-space: nowrap;
-  color: #ffff;
-}
-
 .phoneLink {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -102,12 +97,6 @@ header {
 
   .mobileMenuButton {
     display: block;
-  }
-}
-
-@media (max-width: 480px) {
-  .logoText {
-    display: none;
   }
 }
 

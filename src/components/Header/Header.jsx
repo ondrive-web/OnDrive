@@ -16,12 +16,12 @@ export default function Header() {
           <a>
             <div className={styles.logoIcon}>
               <img
-                style={{ width: '40px', height: '40px', borderRadius: '30%' }}
+                style={{ width: '60px', height: '60px', borderRadius: '30%' }}
                 src="/headerLogo.svg"
                 alt="OnDrive logo"
               />
             </div>
-            <span className={styles.logoText}>OnDrive</span>
+            {/* <span className={styles.logoText}>OnDrive</span> */}
           </a>
 
           <MobileMenu

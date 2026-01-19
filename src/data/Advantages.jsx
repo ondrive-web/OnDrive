@@ -1,4 +1,4 @@
-import { MessageCircle, Search, Zap, ClipboardCheck } from 'lucide-react';
+import { MessageCircle, Search, Zap, ClipboardCheck, Wrench, Headset} from 'lucide-react';
 
 export const advantagesData = [
   {
@@ -34,13 +34,13 @@ export const advantagesData = [
     title: 'Надійні партнери та технічний супровід',
     description:
       'Ми співпрацюємо лише з перевіреними сервісами, щоб одразу після прибуття авто ви могли пройти діагностику, оцінку стану або швидкий ремонт – без клопотів і черг.',
-    icon: <ClipboardCheck size={120} color="white" strokeWidth={1} />,
+    icon: <Wrench size={120} color="white" strokeWidth={1} />,
   },
   {
     id: 6,
     title: 'Підтримка навіть після видачі авто',
     description:
       'Ми не закінчуємо співпрацю, коли передаємо вам ключі.Контролюємо якість, консультуємо, допомагаємо з сервісом і залишаємося на зв’язку стільки, скільки потрібно.',
-    icon: <ClipboardCheck size={120} color="white" strokeWidth={1} />,
+    icon: <Headset size={120} color="white" strokeWidth={1} />,
   },
 ];

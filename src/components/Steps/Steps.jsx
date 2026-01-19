@@ -34,15 +34,13 @@ export default function Steps() {
           </button>
         </div>
 
-        {/* ПРАВА ЧАСТИНА: Візуал документа */}
         <div className={styles.visual}>
           <div className={styles.docCard}>
             <div className={styles.docHeader}>ДОГОВІР №2024/UA</div>
-            {/* Імітація рядків */}
             <div className={styles.line} style={{ width: '100%' }}></div>
             <div className={styles.line} style={{ width: '90%' }}></div>
             <div className={styles.line} style={{ width: '95%' }}></div>
-            <div className={styles.accentLine}></div> {/* Помаранчевий акцент */}
+            <div className={styles.accentLine}></div> 
             <div className={styles.line} style={{ width: '85%' }}></div>
             
             <div className={styles.stamp}>APPROVED</div>

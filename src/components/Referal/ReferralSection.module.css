@@ -1,7 +1,10 @@
 .section {
-  background-color: #f8fafc; /* Світлий, чистий фон */
-  padding: 100px 20px;
-  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  padding: 20px 20px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .container {
@@ -20,23 +23,22 @@
 
 .title {
   font-size: 2.5rem;
-  color: #0f172a; /* Темний колір */
+  color: #0f172a;
   margin-bottom: 16px;
   font-weight: 800;
   letter-spacing: -0.5px;
 }
 
 .highlight {
-  color: #fd7902; /* Помаранчевий акцент */
+  color: #fd7902;
 }
 
 .subtitle {
-  color: #64748b; /* Спокійний сірий */
+  color: #64748b;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
-/* --- Сітка карток --- */
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -47,55 +49,50 @@
 
 .card {
   background: #ffffff;
-  border-radius: 24px; /* Більше скруглення */
-  padding: 50px 30px;  /* Більше простору всередині */
+  border-radius: 24px;
+  padding: 50px 30px;
   text-align: center;
-  
-  /* Чиста тінь */
-  box-shadow: 
+
+  box-shadow:
     0 10px 30px -5px rgba(0, 0, 0, 0.05),
-    0 0 0 1px rgba(0,0,0,0.02);
-    
-  border: 1px solid transparent; /* Резервуємо місце під рамку */
+    0 0 0 1px rgba(0, 0, 0, 0.02);
+
+  border: 1px solid transparent;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
 
-/* Ефект при наведенні на звичайну картку */
 .card:hover {
   transform: translateY(-10px);
-  border-color: rgba(253, 121, 2, 0.3); /* Легка помаранчева рамка */
-  box-shadow: 0 20px 40px -10px rgba(253, 121, 2, 0.15); /* Помаранчеве світіння */
+  border-color: rgba(253, 121, 2, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(253, 121, 2, 0.15);
 }
 
-/* --- Акцентна (Популярна) картка --- */
 .popularCard {
-  border: 2px solid #fd7902; /* Помаранчева рамка */
-  transform: translateY(-10px); /* Вона завжди трохи вище */
-  box-shadow: 0 25px 50px -12px rgba(253, 121, 2, 0.2); /* Постійне світіння */
+  border: 2px solid #fd7902;
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px -12px rgba(253, 121, 2, 0.2);
 }
 
 .popularCard:hover {
-  transform: translateY(-15px); /* Піднімається ще вище */
+  transform: translateY(-15px);
   box-shadow: 0 30px 60px -12px rgba(253, 121, 2, 0.3);
 }
 
-/* --- Елементи картки --- */
 .iconWrapper {
   width: 64px;
   height: 64px;
-  
-  /* Помаранчевий фон, біла іконка */
-  background: #fd7902; 
+
+  background: #fd7902;
   color: #ffffff;
-  
+
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px auto;
-  box-shadow: 0 10px 20px rgba(253, 121, 2, 0.3); /* Тінь під іконкою */
+  box-shadow: 0 10px 20px rgba(253, 121, 2, 0.3);
 }
 
 .iconWrapper svg {
@@ -107,7 +104,7 @@
   display: block;
   font-size: 0.85rem;
   text-transform: uppercase;
-  color: #fd7902; /* Помаранчевий напис */
+  color: #fd7902;
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -115,7 +112,7 @@
 
 .tierPrice {
   font-size: 3.5rem;
-  color: #0f172a; /* Темна ціна */
+  color: #0f172a;
   margin: 0 0 12px 0;
   font-weight: 800;
   line-height: 1;
@@ -129,11 +126,10 @@
   line-height: 1.5;
 }
 
-/* --- Кнопка (така ж як всюди) --- */
 .ctaButton {
-  background: #0f172a; /* Темна */
+  background: #0f172a;
   color: #ffffff;
-  border: none; 
+  border: none;
   padding: 16px 48px;
   border-radius: 50px;
   font-size: 1.1rem;
@@ -144,9 +140,9 @@
 }
 
 .ctaButton:hover {
-  background: #fd7902;     /* Стає помаранчевою */
-  color: #ffffff;          /* Текст залишається білим */
-  box-shadow: 0 15px 30px rgba(253, 121, 2, 0.3); /* Світіння */
+  background: #fd7902;
+  color: #ffffff;
+  box-shadow: 0 15px 30px rgba(253, 121, 2, 0.3);
   transform: translateY(-2px);
 }
 
@@ -158,13 +154,12 @@
     padding: 30px 20px;
   }
   .popularCard {
-    transform: none; /* На мобільному прибираємо зсув, щоб не ламало сітку */
+    transform: none;
     margin-bottom: 20px;
   }
-  /* Додаємо відступ, щоб тінь не обрізалась */
   .cardsGrid {
-     padding: 10px; 
-     margin: 0 -10px 60px -10px;
-     width: calc(100% + 20px);
+    padding: 10px;
+    margin: 0 -10px 60px -10px;
+    width: calc(100% + 20px);
   }
 }

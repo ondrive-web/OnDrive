@@ -1,23 +1,26 @@
-import {
-  Facebook,
-  Instagram,
-  Youtube,
-  Mail,
-  Phone,
-  MapPin,
-} from 'lucide-react';
-
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const SocialLink = ({ href, icon, label }) => (
-  <a href={href} aria-label={label} className={styles.socialLink}>
+  <a
+    href={href}
+    aria-label={label}
+    className={styles.socialLink}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     {icon}
   </a>
 );
 
-const FooterLink = ({ href, children }) => (
+const FooterLink = ({ href, children, target = '_blank' }) => (
   <li>
-    <a href={href} className={styles.linkItem}>
+    <a
+      href={href}
+      className={styles.linkItem}
+      target={target}
+      rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+    >
       <span className={styles.dot}></span>
       <span className={styles.linkText}>{children}</span>
     </a>
@@ -40,7 +43,6 @@ const Footer = () => {
                   alt="Run&Drive Logo"
                 />
               </div>
-
               <span style={{ fontStyle: 'italic' }}>Run&Drive</span>
             </h3>
             <p className={`${styles.subscribeText} ${styles.brandDesc}`}>
@@ -49,40 +51,38 @@ const Footer = () => {
             </p>
             <div className={styles.socialRow}>
               <SocialLink
-                href="#"
+                href="https://instagram.com/your_profile"
                 icon={<Instagram size={20} />}
                 label="Instagram"
-              />
-              <SocialLink
-                href="#"
-                icon={<Youtube size={20} />}
-                label="Youtube"
-              />
-              <SocialLink
-                href="#"
-                icon={<Facebook size={20} />}
-                label="Facebook"
               />
             </div>
           </div>
 
           <div>
-            <h4 className={styles.columnTitle}>Меню</h4>
+            <h4 className={styles.columnTitle}>Аукціони</h4>
             <ul className={styles.linkList}>
-              <FooterLink href="#catalog">Каталог авто</FooterLink>
-              <FooterLink href="#calculator">Калькулятор</FooterLink>
-              <FooterLink href="#how-it-works">Етапи роботи</FooterLink>
-              <FooterLink href="#reviews">Відгуки</FooterLink>
+              <FooterLink href="https://www.copart.com/">Copart</FooterLink>
+              <FooterLink href="https://car.encar.com/">Encar</FooterLink>
+              <FooterLink href="https://site.manheim.com/">Manheim</FooterLink>
+              <FooterLink href="https://www.iaai.com/">IAAI</FooterLink>
             </ul>
           </div>
 
           <div>
             <h4 className={styles.columnTitle}>Напрямки</h4>
             <ul className={styles.linkList}>
-              <FooterLink href="#usa">Авто з США</FooterLink>
-              <FooterLink href="#europe">Авто з Європи</FooterLink>
-              <FooterLink href="#korea">Авто з Кореї</FooterLink>
-              <FooterLink href="#china">Електромобілі</FooterLink>
+              <FooterLink href="#usa" target="_self">
+                Авто з США
+              </FooterLink>
+              <FooterLink href="#europe" target="_self">
+                Авто з Європи
+              </FooterLink>
+              <FooterLink href="#korea" target="_self">
+                Авто з Кореї
+              </FooterLink>
+              <FooterLink href="#china" target="_self">
+                Електромобілі
+              </FooterLink>
             </ul>
           </div>
 
@@ -94,32 +94,34 @@ const Footer = () => {
                   <MapPin size={16} />
                 </div>
                 <span className={styles.contactText}>
-                  Київ, Україна <br />
+                  Житомир, Україна <br />
                   <span className={styles.subText}>
                     Працюємо по всій країні
                   </span>
                 </span>
               </li>
+
               <li className={styles.contactItem}>
                 <div className={styles.iconCircle}>
                   <Phone size={16} />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <a href="tel:+380990000000" className={styles.contactPhone}>
-                    +38 (099) 000-00-00
+                  <a href="tel:+380632161386" className={styles.contactPhone}>
+                    +38 (063) 216-13-86
                   </a>
                   <span className={styles.subText}>Telegram / Viber</span>
                 </div>
               </li>
+
               <li className={styles.contactItem}>
                 <div className={styles.iconCircle}>
                   <Mail size={16} />
                 </div>
                 <a
-                  href="mailto:sales@Run&Drive.ua"
+                  href="mailto:ondrive.ua@gmail.com"
                   className={`${styles.contactText} ${styles.contactLink}`}
                 >
-                  sales@Run&Drive.ua
+                ondrive.ua@gmail.com
                 </a>
               </li>
             </ul>
@@ -128,7 +130,8 @@ const Footer = () => {
 
         <div className={styles.bottomBar}>
           <p>
-            © {currentYear} Run&Drive. Імпорт автомобілів з США, Канади та Кореї.
+            © {currentYear} Run&Drive. Імпорт автомобілів з США, Канади та
+            Кореї.
           </p>
           <div className={styles.legalLinks}>
             <a href="#" className={styles.legalLink}>

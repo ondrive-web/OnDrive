@@ -1,26 +1,40 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from './BudgetSection.module.css';
 import { budgetData } from '../../data/BudgetSection';
 
 export default function BudgetSection() {
   const [activeTab, setActiveTab] = useState(0);
 
+  const { t } = useTranslation();
+
+  const translations = t('budget.items', { returnObjects: true });
+
+  const data = Array.isArray(translations)
+    ? budgetData.map((item, index) => ({
+        ...item,
+        ...translations[index],
+      }))
+    : [];
+
+  if (!data.length) return null;
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>
-            Що можна придбати{' '}
-            <span className={styles.highlight}>в ваш бюджет?</span>
+            {t('budget.title')}{' '}
+            <span className={styles.highlight}>
+              {t('budget.titleHighlight')}
+            </span>
           </h2>
-          <p className={styles.subtitle}>
-            Оберіть ціновий діапазон, щоб побачити реальні можливості ринку США
-          </p>
+          <p className={styles.subtitle}>{t('budget.subtitle')}</p>
         </div>
 
         <div className={styles.wrapper}>
           <div className={styles.tabsList}>
-            {budgetData.map((item, index) => (
+            {data.map((item, index) => (
               <button
                 key={item.id}
                 className={`${styles.tabButton} ${activeTab === index ? styles.active : ''}`}
@@ -33,7 +47,7 @@ export default function BudgetSection() {
           </div>
 
           <div className={styles.contentArea}>
-            {budgetData.map((item, index) => (
+            {data.map((item, index) => (
               <div
                 key={item.id}
                 className={`${styles.contentItem} ${activeTab === index ? styles.show : ''}`}
@@ -48,19 +62,23 @@ export default function BudgetSection() {
 
                 <div className={styles.info}>
                   <h3 className={styles.itemTitle}>{item.title}</h3>
+
                   <div className={styles.modelsBlock}>
-                    <span className={styles.label}>Популярні моделі:</span>
+                    <span className={styles.label}>
+                      {t('budget.modelsLabel')}
+                    </span>
                     <p className={styles.models}>{item.models}</p>
                   </div>
+
                   <p className={styles.desc}>{item.desc}</p>
-                  
+
                   <a
                     href="https://t.me/VoFkA146"
                     className={styles.ctaButton}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Розрахувати авто
+                    {t('budget.ctaButton')}
                   </a>
                 </div>
               </div>

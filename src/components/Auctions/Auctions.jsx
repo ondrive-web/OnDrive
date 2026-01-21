@@ -14,6 +14,8 @@ export default function AuctionsSection() {
       }))
     : [];
 
+  if (!data.length) return null;
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>

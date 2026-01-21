@@ -57,20 +57,56 @@
     "title": "Auctions we work with",
     "items": [
       {
-        "description": "The world leader in online vehicle auctions. The perfect place to find cars for restoration.",
-        "bestFor": "medium damage and low price."
+        "description": "The world leader in online vehicle auctions. The perfect place to find cars for restoration."
       },
       {
-        "description": "Auction focused on light damage. Often features vehicles that start and drive (Run & Drive).",
-        "bestFor": "those looking for minimal damage."
+        "description": "Auction focused on light damage. Often features vehicles that start and drive (Run & Drive)."
       },
       {
-        "description": "Closed auction exclusively for dealers. Sells undamaged cars with clean titles and lease returns.",
-        "bestFor": "buying a whole, reliable car."
+        "description": "Closed auction exclusively for dealers. Sells undamaged cars with clean titles and lease returns."
       },
       {
-        "description": "South Korean market leader. A transparent marketplace with fixed prices selling undamaged cars with detailed service history.",
-        "bestFor": "buying high-trim Hyundai/Kia and LPI (gas) cars."
+        "description": "South Korean market leader. A transparent marketplace with fixed prices selling undamaged cars with detailed service history."
+      }
+    ]
+  },
+
+  "budget": {
+    "title": "What can you buy",
+    "titleHighlight": "within your budget?",
+    "subtitle": "Choose a price range to see real opportunities from the US market",
+    "modelsLabel": "Popular models:",
+    "ctaButton": "Calculate car",
+    "items": [
+      {
+        "range": "under $8,000",
+        "title": "Budget Start",
+        "models": "Ford Focus, Volkswagen Jetta, Hyundai Elantra (2015-2017)",
+        "desc": "Great option for a first car or a daily driver. Usually cars with 100-150k km mileage and minimal damage."
+      },
+      {
+        "range": "$8,000 - $13,000",
+        "title": "Golden Mean",
+        "models": "Ford Fusion, VW Passat, Jeep Compass (2017-2019)",
+        "desc": "The most popular segment. You can expect fresh business-class sedans or compact crossovers in good trims."
+      },
+      {
+        "range": "$13,000 - $18,000",
+        "title": "Modern Crossovers",
+        "models": "Mazda CX-5, Toyota Camry, Nissan Rogue (2018-2021)",
+        "desc": "Recent model years, rich trims, and low mileage. The ideal choice for a family car with high safety standards."
+      },
+      {
+        "range": "$18,000 - $25,000",
+        "title": "Premium & Electric",
+        "models": "Tesla Model 3, BMW 3-series, Audi Q5 (2019+)",
+        "desc": "Entry into the premium world or switching to electric. Cars with cutting-edge technology and high status."
+      },
+      {
+        "range": "$25,000+",
+        "title": "Luxury & Exclusive",
+        "models": "BMW X5, Audi Q8, Mercedes GLE, Porsche Macan",
+        "desc": "Maximum comfort and power. Practically new cars with minimal damage or clean title cars from Manheim."
       }
     ]
   }

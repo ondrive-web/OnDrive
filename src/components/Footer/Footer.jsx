@@ -29,12 +29,12 @@ const FooterLink = ({ href, children, target = '_blank' }) => (
   </li>
 );
 
-const Footer = () => {
+const Footer = ({id}) => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={styles.footer}>
+    <footer id={id} className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.mainGrid}>
           <div className={styles.brandColumn}>

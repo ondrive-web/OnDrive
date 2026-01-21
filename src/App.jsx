@@ -17,15 +17,15 @@ function App() {
     <div>
       <Header />
       <Hero />
-      <AdvantagesSection />
-      <Countries />
-      <AuctionsSection />
-      <BudgetSection />
-      <Steps />
-      <ReferralSection />
-      <Reviews />
+      <AdvantagesSection id="about" />
+      <Countries id="referral" />
+      <AuctionsSection id="auctions" />
+      <BudgetSection id="" />
+      <Steps id="" />
+      <ReferralSection id="" />
+      <Reviews id="" />
 
-      <Footer />
+      <Footer id="contact" />
 
       {/*  */}
       <ContactButton />

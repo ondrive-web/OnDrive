@@ -3,13 +3,13 @@ import { useTranslation } from 'react-i18next';
 import styles from './Advantages.module.css';
 import { advantagesIcons } from '../../data/AdvantagesIcons.jsx';
 
-const AdvantagesSection = () => {
+const AdvantagesSection = ({id}) => {
   const { t } = useTranslation();
 
   const items = t('advantages.items', { returnObjects: true });
 
   return (
-    <section className={styles.section}>
+    <section id={id} className={styles.section}>
       <div className={styles.container}>
         {Array.isArray(items) &&
           items.map((item, index) => {

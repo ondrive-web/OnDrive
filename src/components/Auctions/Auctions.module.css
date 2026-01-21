@@ -122,29 +122,6 @@
   margin-bottom: 20px;
 }
 
-.badge {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-
-  color: #fd7902;
-  background: #fff7ed;
-  border: 1px solid rgba(253, 121, 2, 0.2);
-
-  padding: 8px 16px;
-  border-radius: 50px;
-  display: inline-block;
-  align-self: flex-start;
-}
-
-.badge span {
-  color: #94a3b8;
-  font-weight: 600;
-  opacity: 1;
-  margin-left: 4px;
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;

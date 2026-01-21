@@ -54,6 +54,7 @@
   },
 
   "auctions": {
+    "title": "Auctions we work with",
     "items": [
       {
         "description": "The world leader in online vehicle auctions. The perfect place to find cars for restoration.",

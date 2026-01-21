@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next'; // 1. Импортируем хук
 import styles from './MobileMenu.module.css';
 import { navLinks } from '../../data/NavLinks';
 
 export default function MobileMenu({ isOpen, onNavClick }) {
+  const { t } = useTranslation();
+
   return (
     <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`}>
       {navLinks.map(link => (
@@ -11,7 +14,7 @@ export default function MobileMenu({ isOpen, onNavClick }) {
           className={styles.navLink}
           onClick={e => onNavClick(e, link.href)}
         >
-          {link.label}
+          {t(link.key)}
         </a>
       ))}
 
@@ -25,7 +28,7 @@ export default function MobileMenu({ isOpen, onNavClick }) {
         className={styles.ctaButton}
         onClick={e => onNavClick(e, '#contact')}
       >
-        Залишити заявку
+        {t('nav.cta_button')}
       </a>
     </nav>
   );

@@ -1,4 +1,11 @@
-import { MessageCircle, Search, Zap, ClipboardCheck, Wrench, Headset} from 'lucide-react';
+import {
+  MessageCircle,
+  Search,
+  Zap,
+  ClipboardCheck,
+  Wrench,
+  Headset,
+} from 'lucide-react';
 
 export const advantagesData = [
   {

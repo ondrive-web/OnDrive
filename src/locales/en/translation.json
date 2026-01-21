@@ -109,5 +109,32 @@
         "desc": "Maximum comfort and power. Practically new cars with minimal damage or clean title cars from Manheim."
       }
     ]
+  },
+
+  "referral": {
+    "title": "Affiliate",
+    "titleHighlight": "Program",
+    "subtitle": "The more clients you refer, the higher your rewards. We value long-term relationships.",
+    "ctaButton": "Become a Partner",
+    "items": [
+      {
+        "title": "Starter",
+        "count": "1-3 clients",
+        "price": "$200",
+        "subtext": "per successful deal"
+      },
+      {
+        "title": "Partner",
+        "count": "from 4th client",
+        "price": "$400",
+        "subtext": "increased bonus + priority"
+      },
+      {
+        "title": "VIP Exclusive",
+        "count": "Top Partners",
+        "price": "up to $800",
+        "subtext": "individual terms & % of turnover"
+      }
+    ]
   }
 }

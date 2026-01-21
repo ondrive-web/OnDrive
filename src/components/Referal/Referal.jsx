@@ -1,35 +1,58 @@
+import { useTranslation } from 'react-i18next';
 import styles from './ReferralSection.module.css';
 import { tiersData } from '../../data/TiersData';
 
 const ReferralSection = () => {
+  const { t } = useTranslation();
+  const translations = t('referral.items', { returnObjects: true });
+
+  const data = Array.isArray(translations)
+    ? tiersData.map((item, i) => ({
+        ...item,
+        ...translations[i],
+      }))
+    : [];
+
+  if (!data.length) return null;
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>
-            Партнерська <span className={styles.highlight}>програма</span>
+            {t('referral.title')}{' '}
+            <span className={styles.highlight}>
+              {t('referral.titleHighlight')}
+            </span>
           </h2>
-          <p className={styles.subtitle}>
-            Чим більше клієнтів ви залучаєте, тим вищі ваші винагороди. Ми
-            цінуємо довгострокові відносини.
-          </p>
+          <p className={styles.subtitle}>{t('referral.subtitle')}</p>
         </div>
 
         <div className={styles.cardsGrid}>
-          {tiersData.map(tier => (
-            <div
-              key={tier.id}
-              className={`${styles.card} ${tier.isPopular ? styles.popularCard : ''}`}
-            >
-              <div className={styles.iconWrapper}>{tier.icon}</div>
+          {data.map(tier => {
+            // Берем компонент иконки
+            const IconComponent = tier.icon;
 
-              <div className={styles.tierInfo}>
-                <span className={styles.tierCount}>{tier.count}</span>
-                <h3 className={styles.tierPrice}>{tier.price}</h3>
-                <p className={styles.tierSubtext}>{tier.subtext}</p>
+            return (
+              <div
+                key={tier.id}
+                className={`${styles.card} ${tier.isPopular ? styles.popularCard : ''}`}
+              >
+                <div className={styles.iconWrapper}>
+                  {/* Рендерим иконку с нужными размерами */}
+                  <IconComponent size={24} strokeWidth={2} />
+                </div>
+
+                <div className={styles.tierInfo}>
+                  <h3 className={styles.tierTitle}>{tier.title}</h3>{' '}
+                  {/* Добавил title, он был в данных, но не выводился в верстке выше, на всякий случай */}
+                  <span className={styles.tierCount}>{tier.count}</span>
+                  <div className={styles.tierPrice}>{tier.price}</div>
+                  <p className={styles.tierSubtext}>{tier.subtext}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <a
@@ -38,7 +61,7 @@ const ReferralSection = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Стати партнером
+          {t('referral.ctaButton')}
         </a>
       </div>
     </section>

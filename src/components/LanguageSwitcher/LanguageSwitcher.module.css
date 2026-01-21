@@ -1,7 +1,10 @@
 .switcherContainer {
   position: relative;
   display: inline-block;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .triggerButton {
@@ -22,7 +25,7 @@
 .triggerButton:hover {
   border-color: #fd7902;
   color: #fd7902;
-  background-color: #fffbf7; 
+  background-color: #fffbf7;
 }
 
 .triggerButton:hover .arrow {
@@ -34,8 +37,10 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #64748b; 
-  transition: transform 0.2s ease, border-top-color 0.2s ease;
+  border-top: 5px solid #64748b;
+  transition:
+    transform 0.2s ease,
+    border-top-color 0.2s ease;
 }
 
 .arrowOpen {
@@ -52,7 +57,7 @@
   box-shadow:
     0 10px 15px -3px rgba(253, 121, 2, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  min-width: 140px; 
+  min-width: 140px;
   overflow: hidden;
   animation: fadeIn 0.2s ease-out;
 }
@@ -69,31 +74,72 @@
   cursor: pointer;
   font-size: 14px;
   color: #475569;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .option:hover {
-  background-color: #fff7ed; 
+  background-color: #fff7ed;
   color: #fd7902;
 }
 
 .activeOption {
   background-color: rgba(253, 121, 2, 0.12);
-  color: #fd7902; 
+  color: #fd7902;
   font-weight: bold;
 }
 
 .flag {
-  font-size: 18px; 
+  font-size: 18px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
+@media (max-width: 768px) {
+  .triggerButton {
+    padding: 10px 14px;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #334155;
+    border-color: #e2e8f0;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .triggerButton:active {
+    background-color: #fffbf7;
+    border-color: #fd7902;
+    transform: scale(0.96);
+  }
+
+  .dropdown {
+    min-width: 180px;
+    top: 135%;
+    border-radius: 16px;
+
+    box-shadow:
+      0 10px 40px -10px rgba(0, 0, 0, 0.15),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .option {
+    padding: 14px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .option:last-child {
+    border-bottom: none;
+  }
+
+  .flag {
+    font-size: 20px;
+  }
+
+  .option:hover {
+    background-color: transparent;
+    color: #475569;
+  }
+
+  .option:active {
+    background-color: #fff7ed;
+    color: #fd7902;
   }
 }

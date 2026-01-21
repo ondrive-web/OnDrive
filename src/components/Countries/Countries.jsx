@@ -1,11 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import { countriesData } from '../../data/CountriesSection';
 import styles from './Countries.module.css';
 
 export default function Countries() {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Країни, з якими ми працюємо</h2>
+        <h2 className={styles.title}>{t('countries.title')}</h2>
 
         <div className="">
           <div className={styles.grid}>
@@ -18,12 +21,14 @@ export default function Countries() {
                 <div className={styles.flagWrapper}>
                   <img
                     src={country.flag}
-                    alt={country.name}
+                    alt={t(`countries.list.${country.key}`)}
                     className={styles.flag}
                     loading="lazy"
                   />
                 </div>
-                <p className={styles.name}>{country.name}</p>
+                <p className={styles.name}>
+                  {t(`countries.list.${country.key}`)}
+                </p>
               </div>
             ))}
           </div>

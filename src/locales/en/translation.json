@@ -42,5 +42,14 @@
         "description": "Our cooperation doesn't end when we hand over the keys. We control quality, consult, help with service, and stay in touch as long as needed."
       }
     ]
+  },
+
+  "countries": {
+    "title": "Countries we work with",
+    "list": {
+      "korea": "Korea",
+      "canada": "Canada",
+      "usa": "USA"
+    }
   }
 }

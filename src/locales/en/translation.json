@@ -51,5 +51,26 @@
       "canada": "Canada",
       "usa": "USA"
     }
+  },
+
+  "auctions": {
+    "items": [
+      {
+        "description": "The world leader in online vehicle auctions. The perfect place to find cars for restoration.",
+        "bestFor": "medium damage and low price."
+      },
+      {
+        "description": "Auction focused on light damage. Often features vehicles that start and drive (Run & Drive).",
+        "bestFor": "those looking for minimal damage."
+      },
+      {
+        "description": "Closed auction exclusively for dealers. Sells undamaged cars with clean titles and lease returns.",
+        "bestFor": "buying a whole, reliable car."
+      },
+      {
+        "description": "South Korean market leader. A transparent marketplace with fixed prices selling undamaged cars with detailed service history.",
+        "bestFor": "buying high-trim Hyundai/Kia and LPI (gas) cars."
+      }
+    ]
   }
 }

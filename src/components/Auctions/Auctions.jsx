@@ -1,7 +1,10 @@
-import { auctionsData } from '../../data/AuctionsSection.jsx'
+// import { useTranslation } from 'react-i18next';
+import { auctionsData } from '../../data/AuctionsSection.jsx';
 import styles from './Auctions.module.css';
 
 export default function AuctionsSection() {
+  // const { t } = useTranslation();
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>

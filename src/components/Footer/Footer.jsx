@@ -1,3 +1,5 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import styles from './Footer.module.css';
 
@@ -28,6 +30,7 @@ const FooterLink = ({ href, children, target = '_blank' }) => (
 );
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -35,20 +38,23 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.mainGrid}>
           <div className={styles.brandColumn}>
-            <h3 className={styles.brandLogo}>
+            <div className={styles.brandLogo}>
               <div className={styles.logoIconBox}>
                 <img
                   src="/headerLogo.svg"
-                  style={{ width: '60px', height: '60px', borderRadius: '30%' }}
+                  style={{
+                    width: '50px',
+                    height: '50px',
+                    borderRadius: '12px',
+                  }}
                   alt="Run&Drive Logo"
                 />
               </div>
-              <span style={{ fontStyle: 'italic' }}>Run&Drive</span>
-            </h3>
-            <p className={`${styles.subscribeText} ${styles.brandDesc}`}>
-              Повний супровід купівлі авто з-за кордону. Ми беремо на себе
-              підбір, перевірку, доставку та розмитнення.
-            </p>
+              <span style={{ fontStyle: 'italic', fontWeight: '800' }}>
+                Run&Drive
+              </span>
+            </div>
+            <p className={styles.brandDesc}>{t('footer.description')}</p>
             <div className={styles.socialRow}>
               <SocialLink
                 href="https://instagram.com/your_profile"
@@ -59,7 +65,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className={styles.columnTitle}>Аукціони</h4>
+            <h4 className={styles.columnTitle}>{t('footer.colAuctions')}</h4>
             <ul className={styles.linkList}>
               <FooterLink href="https://www.copart.com/">Copart</FooterLink>
               <FooterLink href="https://car.encar.com/">Encar</FooterLink>
@@ -69,47 +75,49 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className={styles.columnTitle}>Напрямки</h4>
+            <h4 className={styles.columnTitle}>{t('footer.colDirections')}</h4>
             <ul className={styles.linkList}>
               <FooterLink href="#usa" target="_self">
-                Авто з США
+                {t('footer.directions.usa')}
               </FooterLink>
               <FooterLink href="#europe" target="_self">
-                Авто з Європи
+                {t('footer.directions.europe')}
               </FooterLink>
               <FooterLink href="#korea" target="_self">
-                Авто з Кореї
+                {t('footer.directions.korea')}
               </FooterLink>
               <FooterLink href="#china" target="_self">
-                Електромобілі
+                {t('footer.directions.china')}
               </FooterLink>
             </ul>
           </div>
 
           <div>
-            <h4 className={styles.columnTitle}>Зв'язок</h4>
+            <h4 className={styles.columnTitle}>{t('footer.colContact')}</h4>
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
                 <div className={styles.iconCircle}>
                   <MapPin size={16} />
                 </div>
-                <span className={styles.contactText}>
-                  Житомир, Україна <br />
+                <div className={styles.contactText}>
+                  {t('footer.address')} <br />
                   <span className={styles.subText}>
-                    Працюємо по всій країні
+                    {t('footer.addressSub')}
                   </span>
-                </span>
+                </div>
               </li>
 
               <li className={styles.contactItem}>
                 <div className={styles.iconCircle}>
                   <Phone size={16} />
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div>
                   <a href="tel:+380632161386" className={styles.contactPhone}>
                     +38 (063) 216-13-86
                   </a>
-                  <span className={styles.subText}>Telegram / Viber</span>
+                  <span className={styles.subText}>
+                    {t('footer.messenger')}
+                  </span>
                 </div>
               </li>
 
@@ -119,9 +127,9 @@ const Footer = () => {
                 </div>
                 <a
                   href="mailto:ondrive.ua@gmail.com"
-                  className={`${styles.contactText} ${styles.contactLink}`}
+                  className={styles.contactLink}
                 >
-                ondrive.ua@gmail.com
+                  ondrive.ua@gmail.com
                 </a>
               </li>
             </ul>
@@ -129,14 +137,11 @@ const Footer = () => {
         </div>
 
         <div className={styles.bottomBar}>
-          <p>
-            © {currentYear} Run&Drive. Імпорт автомобілів з США, Канади та
-            Кореї.
+          <p className={styles.copyright}>
+            {t('footer.copy', { year: currentYear })}
           </p>
           <div className={styles.legalLinks}>
-            <a href="#" className={styles.legalLink}>
-              Всі права захищені.
-            </a>
+            <span className={styles.legalLink}>{t('footer.rights')}</span>
           </div>
         </div>
       </div>

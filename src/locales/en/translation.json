@@ -168,5 +168,23 @@
         "text": "Brought a Tesla from Copart. Fast, professional, no extra stress. Best company!"
       }
     ]
+  },
+
+  "footer": {
+    "description": "Full support for purchasing vehicles from abroad. We handle selection, inspection, delivery, and customs clearance.",
+    "colAuctions": "Auctions",
+    "colDirections": "Regions",
+    "colContact": "Contact Us",
+    "directions": {
+      "usa": "Cars from USA",
+      "europe": "Cars from Europe",
+      "korea": "Cars from Korea",
+      "china": "Electric Vehicles"
+    },
+    "address": "Zhytomyr, Ukraine",
+    "addressSub": "Operating nationwide",
+    "messenger": "Telegram / Viber",
+    "copy": "© {{year}} Run&Drive. Car imports from USA, Canada, and Korea.",
+    "rights": "All rights reserved."
   }
 }

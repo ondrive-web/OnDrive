@@ -12,5 +12,35 @@
     "title": "Cars from auctions <br/> in USA, Canada and Korea",
     "subtitle": "Exclusive access to a wide range of cars and full support – we are your guide from the first idea to the moment you hold the keys: we advise, explain, warn about risks, and leave the final decision to you.",
     "cta_button": "Calculate cost"
+  },
+
+  "advantages": {
+    "tag": "Our Advantages",
+    "items": [
+      {
+        "title": "Constant communication and transparency",
+        "description": "We are always in touch and provide an honest picture of the process: detailed photo and video reports at every logistics stage, timely updates in messengers, and complete transparency regarding your car's status."
+      },
+      {
+        "title": "Full support from selection to key handover",
+        "description": "We select a car based on your criteria, provide professional recommendations, warn about risks, and expand choices if the ideal option doesn't appear immediately. The final decision is always yours."
+      },
+      {
+        "title": "Delivery speed",
+        "description": "We select the optimal shipping port and route so the car arrives as quickly as possible and at the best price. We save your time and budget without compromising on quality."
+      },
+      {
+        "title": "Honest pricing",
+        "description": "The car's cost is fixed in the contract. No post-payments, small print, or unexpected expenses – you know your final amount immediately."
+      },
+      {
+        "title": "Reliable partners and technical support",
+        "description": "We cooperate only with verified services so that immediately after the car's arrival, you can undergo diagnostics, condition assessment, or quick repairs – without hassle or queues."
+      },
+      {
+        "title": "Support even after delivery",
+        "description": "Our cooperation doesn't end when we hand over the keys. We control quality, consult, help with service, and stay in touch as long as needed."
+      }
+    ]
   }
 }

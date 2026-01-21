@@ -20,7 +20,7 @@ const ReferralSection = () => {
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>
-            {t('referral.title')}{' '}
+            {t('referral.title')}
             <span className={styles.highlight}>
               {t('referral.titleHighlight')}
             </span>
@@ -30,7 +30,6 @@ const ReferralSection = () => {
 
         <div className={styles.cardsGrid}>
           {data.map(tier => {
-            // Берем компонент иконки
             const IconComponent = tier.icon;
 
             return (
@@ -39,13 +38,11 @@ const ReferralSection = () => {
                 className={`${styles.card} ${tier.isPopular ? styles.popularCard : ''}`}
               >
                 <div className={styles.iconWrapper}>
-                  {/* Рендерим иконку с нужными размерами */}
                   <IconComponent size={24} strokeWidth={2} />
                 </div>
 
                 <div className={styles.tierInfo}>
-                  <h3 className={styles.tierTitle}>{tier.title}</h3>{' '}
-                  {/* Добавил title, он был в данных, но не выводился в верстке выше, на всякий случай */}
+                  <h3 className={styles.tierTitle}>{tier.title}</h3>
                   <span className={styles.tierCount}>{tier.count}</span>
                   <div className={styles.tierPrice}>{tier.price}</div>
                   <p className={styles.tierSubtext}>{tier.subtext}</p>

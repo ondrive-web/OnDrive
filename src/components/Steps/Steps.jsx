@@ -11,7 +11,7 @@ export default function Steps() {
       <div className={styles.container}>
         <div className={styles.content}>
           <h2 className={styles.title}>
-            {t('steps.title')}{' '}
+            {t('steps.title')}
             <span className={styles.highlight}>
               {t('steps.titleHighlight')}
             </span>

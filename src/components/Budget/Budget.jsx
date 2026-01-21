@@ -24,7 +24,7 @@ export default function BudgetSection() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>
-            {t('budget.title')}{' '}
+            {t('budget.title')}
             <span className={styles.highlight}>
               {t('budget.titleHighlight')}
             </span>

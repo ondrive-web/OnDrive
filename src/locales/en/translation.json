@@ -149,5 +149,24 @@
       "Full material liability",
       "Car cleared directly to you"
     ]
+  },
+
+  "reviews": {
+    "title": "Reviews from",
+    "titleHighlight": "our clients",
+    "items": [
+      {
+        "name": "Ivan Koval",
+        "text": "Got exactly the car I wanted. The team kept me updated at every stage. Highly recommend."
+      },
+      {
+        "name": "Oleh Shevchenko",
+        "text": "Everything went smoothly — they helped with selection, calculation, and delivery. Very grateful!"
+      },
+      {
+        "name": "Max Lytvyn",
+        "text": "Brought a Tesla from Copart. Fast, professional, no extra stress. Best company!"
+      }
+    ]
   }
 }

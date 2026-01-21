@@ -84,3 +84,48 @@
   transition: all 0.3s ease;
   transition-delay: var(--delay);
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    right: 16px;
+    bottom: 20px;
+
+    /*Для iPhone: отступ с учетом нижней полоски (Home Indicator) */
+    bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+
+  .mainButton {
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .mainButton:hover {
+    transform: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .mainButton:active {
+    transform: scale(0.95);
+  }
+
+  .menu {
+    bottom: 70px;
+    gap: 8px;
+  }
+
+  .link {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  .link:hover {
+    transform: translateY(0);
+    background-color: #fff;
+  }
+
+  .link:active {
+    background-color: #f0f0f0;
+    transform: scale(0.98);
+  }
+}

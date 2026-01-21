@@ -136,5 +136,18 @@
         "subtext": "individual terms & % of turnover"
       }
     ]
+  },
+
+  "steps": {
+    "title": "We work under an",
+    "titleHighlight": "official contract",
+    "description": "No hidden conditions. We legally fix the price, deadlines, and liability.",
+    "docHeader": "CONTRACT #2024/US",
+    "docStamp": "APPROVED",
+    "list": [
+      "Budget fixed without extra costs",
+      "Full material liability",
+      "Car cleared directly to you"
+    ]
   }
 }

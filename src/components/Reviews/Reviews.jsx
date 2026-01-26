@@ -51,7 +51,7 @@ export default function Reviews() {
               <div className={styles.card}>
                 <div className={styles.imageWrapper}>
                   <img
-                    src={review.image || 'https://placehold.co/100'}
+                    src={review.image}
                     alt={review.name}
                     className={styles.reviewImage}
                   />

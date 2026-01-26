@@ -2,8 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { Star } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-
-// Обязательные стили Swiper
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -14,8 +12,6 @@ export default function Reviews() {
   const { t } = useTranslation();
   const translations = t('reviews.items', { returnObjects: true });
 
-  // 1. Объединяем данные
-  // 2. Ограничиваем до 6 штук (.slice)
   const allReviews = Array.isArray(translations)
     ? reviews
         .map((item, index) => ({
@@ -39,7 +35,7 @@ export default function Reviews() {
 
         <Swiper
           modules={[Pagination, Autoplay]}
-          spaceBetween={30} // Расстояние между слайдами (как было gap)
+          spaceBetween={30}
           slidesPerView={1}
           pagination={{ clickable: true, dynamicBullets: true }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -53,7 +49,6 @@ export default function Reviews() {
           {allReviews.map(review => (
             <SwiperSlide key={review.id} className={styles.slide}>
               <div className={styles.card}>
-                {/* Блок картинки (если картинки нет в данных, можно добавить заглушку) */}
                 <div className={styles.imageWrapper}>
                   <img
                     src={review.image || 'https://placehold.co/100'}
@@ -69,6 +64,10 @@ export default function Reviews() {
                 </div>
 
                 <h3 className={styles.name}>{review.name}</h3>
+
+                <p className={styles.carModel}>
+                  <strong>Авто:</strong> {review.carModel}{' '}
+                </p>
 
                 <p className={styles.reviewText}>{review.text}</p>
               </div>

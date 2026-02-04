@@ -1,7 +1,7 @@
 export const budgetData = [
   {
     id: 1,
-    image: '',
+    image: '../../public/images/budget/VW_Jetta_15.webp',
   },
   {
     id: 2,

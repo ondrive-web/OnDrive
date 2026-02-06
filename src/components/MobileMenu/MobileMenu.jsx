@@ -23,7 +23,7 @@ export default function MobileMenu({ isOpen, onNavClick }) {
       </a>
 
       <a
-        href="https://t.me/VoFkA146"
+        href="https://t.me/Volodymyr_OnDrive"
         target="blank"
         className={styles.ctaButton}
         onClick={e => onNavClick(e, '#contact')}

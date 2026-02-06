@@ -24,7 +24,7 @@ export default function Hero({ onCTAClick }) {
         </div>
 
         <a
-          href="https://t.me/VoFkA146"
+          href="https://t.me/Volodymyr_OnDrive"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.ctaButton}

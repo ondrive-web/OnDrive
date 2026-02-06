@@ -8,7 +8,7 @@ import Steps from './components/Steps/Steps';
 import ReferralSection from './components/Referal/Referal';
 import Footer from './components/Footer/Footer';
 import Reviews from './components/Reviews/Reviews';
-import TrustindexWidget from './components/Trustindex/Trustindex';
+// import TrustindexWidget from './components/Trustindex/Trustindex';
 
 // Contact BTN
 import ContactButton from './components/ContactButton/ContactButton';
@@ -24,7 +24,7 @@ function App() {
       <BudgetSection id="" />
       <Steps id="" />
       <ReferralSection id="" />
-      <TrustindexWidget id="" />
+      {/* <TrustindexWidget id="" /> */}
       <Reviews id="" />
       <Footer id="contact" />
 

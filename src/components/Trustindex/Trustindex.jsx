@@ -11,7 +11,7 @@ const TrustindexWidget = () => {
 
     const script = document.createElement('script');
     script.src =
-      'https://cdn.trustindex.io/loader.js?55247e0647f0223ad926dc0e234';
+      'https://cdn.trustindex.io/loader.js?920a3fc64e242285d856fc7acbf';
     script.async = true;
     script.defer = true;
 

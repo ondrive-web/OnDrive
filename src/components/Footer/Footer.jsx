@@ -61,7 +61,6 @@ const Footer = ({ id }) => {
                 icon={<Instagram size={20} />}
                 label="Instagram"
               />
-              //! ДОБАВИТЬ ССЫЛКУ НА ТГ КАНАЛ!!
               <SocialLink href="" icon={<Send size={20} />} label="Telegram" />
             </div>
           </div>

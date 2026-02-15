@@ -19,7 +19,7 @@
     "items": [
       {
         "title": "Constant communication and transparency",
-        "description": "We are always in touch and provide an honest picture of the process: detailed photo and video reports at every logistics stage, timely updates in messengers, and complete transparency regarding your car's status."
+        "description": "We are always in touch and provide an honest picture of the process: full verification of documents and vehicle maintenance history, detailed photo and video reports at every stage of logistics, timely updates via messengers, and complete transparency regarding your car's status."
       },
       {
         "title": "Full support from selection to key handover",
@@ -88,7 +88,7 @@
         "range": "$13,000 - $18,000",
         "title": "Modern Crossovers",
         "models": "Mazda CX-5, Toyota Camry, Nissan Rogue (2018-2021)",
-        "desc": "Recent model years, rich trims, and low mileage. The ideal choice for a family car with high safety standards."
+        "desc": "Recent model years, rich trims, and low mileage. A car that is suitable for a family and meets high safety standarts."
       },
       {
         "range": "$18,000 - $25,000",
@@ -108,7 +108,7 @@
   "referral": {
     "title": "Affiliate ",
     "titleHighlight": "program",
-    "subtitle": "You receive a referral payout for every client you attract — and the more clients, the higher your income.",
+    "subtitle": "For each involved client, you receive a referral payment – and the more clients, the higher your income.",
     "ctaButton": "Become a Partner",
     "items": [
       {
@@ -183,7 +183,7 @@
   },
 
   "footer": {
-    "description": "Full support for purchasing vehicles from abroad. We handle selection, inspection, delivery, and customs clearance.",
+    "description": "We manage the purchase of cars from abroad from the first inquiry to the handover of keys. We handle the search and inspection, auction bidding, delivery, insurance, customs clearance, and registration. You get a transparent process, reports at every stage, and a personal manager always in touch.",
     "colAuctions": "Auctions",
     "colDirections": "Regions",
     "colContact": "Contact Us",

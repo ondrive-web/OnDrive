@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin, Send } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const SocialLink = ({ href, icon, label }) => (
@@ -29,7 +29,7 @@ const FooterLink = ({ href, children, target = '_blank' }) => (
   </li>
 );
 
-const Footer = ({id}) => {
+const Footer = ({ id }) => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
@@ -61,6 +61,8 @@ const Footer = ({id}) => {
                 icon={<Instagram size={20} />}
                 label="Instagram"
               />
+              //! ДОБАВИТЬ ССЫЛКУ НА ТГ КАНАЛ!!
+              <SocialLink href="" icon={<Send size={20} />} label="Telegram" />
             </div>
           </div>
 

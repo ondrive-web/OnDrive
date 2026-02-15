@@ -8,9 +8,9 @@ import Steps from './components/Steps/Steps';
 import ReferralSection from './components/Referal/Referal';
 import Footer from './components/Footer/Footer';
 import Reviews from './components/Reviews/Reviews';
+import TelegramSection from './components/Telegram/TelegramInfo';
 // import TrustindexWidget from './components/Trustindex/Trustindex';
 
-// Contact BTN
 import ContactButton from './components/ContactButton/ContactButton';
 
 function App() {
@@ -24,10 +24,10 @@ function App() {
       <BudgetSection id="" />
       <Steps id="" />
       <ReferralSection id="" />
+      <TelegramSection id="" />
       {/* <TrustindexWidget id="" /> */}
       <Reviews id="" />
       <Footer id="contact" />
-
       {/*  */}
       <ContactButton />
     </div>

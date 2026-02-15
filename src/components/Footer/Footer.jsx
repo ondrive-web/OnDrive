@@ -61,7 +61,11 @@ const Footer = ({ id }) => {
                 icon={<Instagram size={20} />}
                 label="Instagram"
               />
-              <SocialLink href="" icon={<Send size={20} />} label="Telegram" />
+              <SocialLink
+                href="https://t.me/runndrive_ua"
+                icon={<Send size={20} />}
+                label="Telegram"
+              />
             </div>
           </div>
 

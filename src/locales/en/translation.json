@@ -145,6 +145,27 @@
     ]
   },
 
+  "telegram": {
+    "badge": "Live updates 24/7",
+    "title_start": "Catching lots that are",
+    "title_highlight": "missing from the market",
+    "description_start": "The best auction deals last only hours. In Telegram, we post hot",
+    "description_end": "lots, calculate turnkey prices, and show real savings.",
+    "benefits": {
+      "exclusive": "Exclusive selections from $10k",
+      "history": "Honest history (Carfax)",
+      "managers": "Chat with company managers"
+    },
+    "cta_button": "Join the channel",
+    "card": {
+      "notification": "+1 New car",
+      "sub_header": "Become part of our community",
+      "car_title": "Audi Q8 S-Line (2021)",
+      "bid_label": "Winning bid:",
+      "savings_label": "Savings:"
+    }
+  },
+
   "reviews": {
     "title": "Reviews ",
     "titleHighlight": "of our clients",

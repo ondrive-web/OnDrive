@@ -1,28 +1,22 @@
-import img1 from '../../public/images/budget/white-jetta-usa.webp';
-import img2 from '../../public/images/budget/black-ford-usa.webp';
-import img3 from '../../public/images/budget/silver-mazda-usa.webp';
-import img4 from '../../public/images/budget/silver-audi-usa.webp';
-import img5 from '../../public/images/budget/dark-gray-bmw-usa.webp';
-
 export const budgetData = [
   {
     id: 1,
-    image: img1,
+    image: '',
   },
   {
     id: 2,
-    image: img2,
+    image: '',
   },
   {
     id: 3,
-    image: img3,
+    image: '',
   },
   {
     id: 4,
-    image: img4,
+    image: '',
   },
   {
     id: 5,
-    image: img5,
+    image: '',
   },
 ];

@@ -57,7 +57,7 @@
     "title": "Auctions we work with",
     "items": [
       {
-        "description": "The world leader in online vehicle auctions. The perfect place to find cars for restoration."
+        "description": "The world leader in online vehicle auctions."
       },
       {
         "description": "Auction focused on light damage. Often features vehicles that start and drive (Run & Drive)."
@@ -72,7 +72,7 @@
   },
 
   "budget": {
-    "title": "What can you buy",
+    "title": "What can you buy ",
     "titleHighlight": "within your budget?",
     "subtitle": "Choose a price range to see real opportunities from the US market",
     "modelsLabel": "Popular models:",
@@ -112,9 +112,9 @@
   },
 
   "referral": {
-    "title": "Affiliate",
-    "titleHighlight": "Program",
-    "subtitle": "The more clients you refer, the higher your rewards. We value long-term relationships.",
+    "title": "Affiliate ",
+    "titleHighlight": "program",
+    "subtitle": "You receive a referral payout for every client you attract — and the more clients, the higher your income.",
     "ctaButton": "Become a Partner",
     "items": [
       {
@@ -139,7 +139,7 @@
   },
 
   "steps": {
-    "title": "We work under an",
+    "title": "We work under an ",
     "titleHighlight": "official contract",
     "description": "No hidden conditions. We legally fix the price, deadlines, and liability.",
     "docHeader": "CONTRACT #2024/US",
@@ -152,41 +152,41 @@
   },
 
   "reviews": {
-  "title": "Reviews",
-  "titleHighlight": "of our clients",
-  "items": [
-    {
-      "name": "Maksym",
-      "carModel": "Ford Escape Hybrid, 2020",
-      "text": "Volodymyr, thanks for the great car choice! The configuration is even better than we expected, full of options, and the car is fully loaded. Everything was very fast in terms of timing, and the logistics were top-notch! I will recommend your company to all my friends!!!!"
-    },
-    {
-      "name": "Vadym",
-      "carModel": "Nissan Rogue, 2018",
-      "text": "Volodymyr, greetings! We received the Rogue and have already repaired it. The repair cost less than expected, so there's even a budget surplus left. Now the car is like brand new! Many thanks to you and the RunNDrive company, we will recommend you!"
-    },
-    {
-      "name": "Oleksandr",
-      "carModel": "Infiniti QX50, 2019",
-      "text": "Volodymyr, good day! Thank you very much for the great work! I hope we will work together again. Have a great day and success in your work! 🤝"
-    },
-    {
-      "name": "Vadym",
-      "carModel": "Jeep Grand Cherokee, 2018",
-      "text": "I want to thank the RunNDrive company for your quality work and professional approach! I am very satisfied with the final result and the repair quality at your service stations. We are thinking about buying a car for my wife, so when we decide, we will only contact you 😊"
-    },
-    {
-      "name": "Anton",
-      "carModel": "Tesla Model Y, 2022",
-      "text": "Wanted to share a review about buying a Tesla from RunNDrive. We bought it at the last moment of zero duty on EVs. Our manager calculated the delivery almost day-to-day, accounting for all delay risks, and we managed to register it on Dec 28. Really liked the service, selection approach, and responsibility. The car is under repair, looking forward to driving it and will recommend only you 🙏🔥"
-    },
-    {
-      "name": "Oleksandr",
-      "carModel": "Tesla Model 3, 2022",
-      "text": "Volodymyr, we picked up the finished Tesla and have been driving it for a week. Completely satisfied with the purchase, as we were looking for a profitable option, and with repairs, it cost 5 thousand less than the market price in Ukraine. We chose for a long time, but we picked exactly the option we wanted for all our needs. Thank you for your work, and we wish you success and development!"
-    }
-  ]
-},
+    "title": "Reviews ",
+    "titleHighlight": "of our clients",
+    "items": [
+      {
+        "name": "Maksym",
+        "carModel": "Ford Escape Hybrid, 2020",
+        "text": "Volodymyr, thanks for the great car choice! The configuration is even better than we expected, full of options, and the car is fully loaded. Everything was very fast in terms of timing, and the logistics were top-notch! I will recommend your company to all my friends!!!!"
+      },
+      {
+        "name": "Vadym",
+        "carModel": "Nissan Rogue, 2018",
+        "text": "Volodymyr, greetings! We received the Rogue and have already repaired it. The repair cost less than expected, so there's even a budget surplus left. Now the car is like brand new! Many thanks to you and the RunNDrive company, we will recommend you!"
+      },
+      {
+        "name": "Oleksandr",
+        "carModel": "Infiniti QX50, 2019",
+        "text": "Volodymyr, good day! Thank you very much for the great work! I hope we will work together again. Have a great day and success in your work! 🤝"
+      },
+      {
+        "name": "Vadym",
+        "carModel": "Jeep Grand Cherokee, 2018",
+        "text": "I want to thank the RunNDrive company for your quality work and professional approach! I am very satisfied with the final result and the repair quality at your service stations. We are thinking about buying a car for my wife, so when we decide, we will only contact you 😊"
+      },
+      {
+        "name": "Anton",
+        "carModel": "Tesla Model Y, 2022",
+        "text": "Wanted to share a review about buying a Tesla from RunNDrive. We bought it at the last moment of zero duty on EVs. Our manager calculated the delivery almost day-to-day, accounting for all delay risks, and we managed to register it on Dec 28. Really liked the service, selection approach, and responsibility. The car is under repair, looking forward to driving it and will recommend only you 🙏🔥"
+      },
+      {
+        "name": "Oleksandr",
+        "carModel": "Tesla Model 3, 2022",
+        "text": "Volodymyr, we picked up the finished Tesla and have been driving it for a week. Completely satisfied with the purchase, as we were looking for a profitable option, and with repairs, it cost 5 thousand less than the market price in Ukraine. We chose for a long time, but we picked exactly the option we wanted for all our needs. Thank you for your work, and we wish you success and development!"
+      }
+    ]
+  },
 
   "footer": {
     "description": "Full support for purchasing vehicles from abroad. We handle selection, inspection, delivery, and customs clearance.",

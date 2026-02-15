@@ -72,18 +72,12 @@
   },
 
   "budget": {
-    "title": "What can you buy ",
-    "titleHighlight": "within your budget?",
+    "title": "Examples of cars ",
+    "titleHighlight": "that suit your budget",
     "subtitle": "Choose a price range to see real opportunities from the US market",
     "modelsLabel": "Popular models:",
     "ctaButton": "Calculate car",
     "items": [
-      {
-        "range": "under $8,000",
-        "title": "Budget Start",
-        "models": "Ford Focus, Volkswagen Jetta, Hyundai Elantra (2015-2017)",
-        "desc": "Great option for a first car or a daily driver. Usually cars with 100-150k km mileage and minimal damage."
-      },
       {
         "range": "$8,000 - $13,000",
         "title": "Golden Mean",

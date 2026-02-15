@@ -15,8 +15,4 @@ export const budgetData = [
     id: 4,
     image: '',
   },
-  {
-    id: 5,
-    image: '',
-  },
 ];

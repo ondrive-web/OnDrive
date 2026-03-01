@@ -1,106 +1,110 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Send, CheckCircle2, BellRing } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './TelegramInfo.module.css';
+import { Send, Phone } from 'lucide-react';
 
-const CAR_IMAGE_URL =
-  'https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1000&auto=format&fit=crop';
+const TelegramNews = () => {
+  const [scrollOffset, setScrollOffset] = useState(0);
+  const sectionRef = useRef(null);
 
-export default function TelegramSection() {
-  const { t } = useTranslation();
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+
+      const rect = sectionRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Анімуємо тільки тоді, коли блок видно на екрані
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        // Легкий зсув
+        let move = (windowHeight - rect.top) * 0.05;
+
+        // Омеження: текст роз'їжджається максимум на 40px
+        if (move > 40) move = 40;
+        if (move < 0) move = 0;
+
+        setScrollOffset(move);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Задаємо початкову позицію
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <section className={styles.section}>
-      <div className={styles.glowBgLeft}></div>
+    <section ref={sectionRef} className={styles.section}>
+      {/* АНІМОВАНІ ЗАГОЛОВКИ (ПОВЕРХ УСЬОГО) */}
+      <div className={styles.animatedTitles}>
+        <h1
+          className={styles.telegramText}
+          style={{ transform: `translateX(-${scrollOffset}px)` }} // Їде вліво
+        >
+          TELEGRAM
+        </h1>
+        <h2
+          className={styles.newsText}
+          style={{ transform: `translateX(${scrollOffset}px)` }} // Їде вправо
+        >
+          NEWS
+        </h2>
+      </div>
 
       <div className={styles.container}>
-        <div className={styles.textContent}>
-          <div className={styles.badge}>
-            <span className={styles.pulseDot}></span>
-            {t('telegram.badge')}
+        <div className={styles.imageCol}>
+          <div className={styles.floatingWrapper}>
+            <img
+              src="../../../public/images/Дизайн без назви (25).webp"
+              alt="Telegram News on Smartphone"
+              className={styles.image}
+            />
           </div>
-
-          <h2 className={styles.title}>
-            {t('telegram.title_start')} <br />
-            <span className={styles.highlight}>
-              {t('telegram.title_highlight')}
-            </span>
-          </h2>
-
-          <p className={styles.description}>
-            {t('telegram.description_start')}{' '}
-            <span className={styles.highlight}>Run & Drive</span>
-            {t('telegram.description_end')}
-          </p>
-
-          <ul className={styles.benefitsList}>
-            <li>
-              <div className={styles.iconBox}>
-                <CheckCircle2 size={18} />
-              </div>{' '}
-              {t('telegram.benefits.exclusive')}
-            </li>
-            <li>
-              <div className={styles.iconBox}>
-                <CheckCircle2 size={18} />
-              </div>{' '}
-              {t('telegram.benefits.history')}
-            </li>
-            <li>
-              <div className={styles.iconBox}>
-                <CheckCircle2 size={18} />
-              </div>{' '}
-              {t('telegram.benefits.managers')}
-            </li>
-          </ul>
-
-          <a
-            href="https://t.me/runndrive_ua"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.ctaButton}
-          >
-            <Send size={20} className={styles.sendIcon} />
-            <span>{t('telegram.cta_button')}</span>
-            <div className={styles.buttonGlow}></div>
-          </a>
         </div>
 
-        <div className={styles.visualContent}>
-          <div className={styles.chatCard}>
-            <div className={styles.notificationBadge}>
-              <BellRing size={16} fill="currentColor" />
-              <span>{t('telegram.card.notification')}</span>
-            </div>
+        <div className={styles.contentCol}>
+          <h3 className={styles.subtitle}>
+            НАЙВИГІДНІШІ І ПЕРЕВІРЕНІ
+            <br />
+            ЛОТИ З США ТА ЄВРОПИ
+            <br />У НАШИХ СПІЛЬНОТАХ
+          </h3>
 
-            <div className={styles.chatHeader}>
-              <div className={styles.avatar}>OD</div>
-              <div className={styles.chatInfo}>
-                <h4>OnDrive | USA Import</h4>
-                <p>{t('telegram.card.sub_header')}</p>
-              </div>
-            </div>
+          <p className={styles.description}>
+            Кожного дня інформуємо про кращі пропозиції з аукціонів США. Ви
+            будете в курсі всіх свіжих, вигідних американські авто та Європи.
+            Завдяки чому зможете підібрати собі відмінне авто за найнижчою
+            ціною!
+          </p>
 
-            <div className={styles.messageBody}>
-              <div className={styles.imageWrapper}>
-                <img src={CAR_IMAGE_URL} alt="Car Example" />
-                <div className={styles.statusTag}>Run & Drive 🟢</div>
-              </div>
-              <div className={styles.messageText}>
-                <p className={styles.carTitle}>
-                  🔥 <b>{t('telegram.card.car_title')}</b>
-                </p>
-                <div className={styles.priceTag}>
-                  {t('telegram.card.bid_label')} <b>$28,400</b>
+          <div className={styles.buttonsWrapper}>
+            <a href="#viber" className={styles.button}>
+              <div className={`${styles.iconWrapper} ${styles.viberIconBg}`}>
+                <div className={styles.buttonsWrapper}>
+                  <a href="#viber" className={styles.button}>
+                    <div
+                      className={`${styles.iconWrapper} ${styles.viberIconBg}`}
+                    >
+                      <Phone size={20} color="white" strokeWidth={2} />
+                    </div>
+                    <span>Viber</span>
+                  </a>
+
+                  <a href="#telegram" className={styles.button}>
+                    <div
+                      className={`${styles.iconWrapper} ${styles.telegramIconBg}`}
+                    >
+                      <Send size={20} color="white" strokeWidth={2} />
+                    </div>
+                    <span>Telegram</span>
+                  </a>
                 </div>
-                <p className={styles.savingsText}>
-                  {t('telegram.card.savings_label')} ~$12,000!
-                </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default TelegramNews;

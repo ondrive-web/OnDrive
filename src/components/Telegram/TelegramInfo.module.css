@@ -27,7 +27,7 @@
   font-weight: 800;
   margin: 0;
   padding-left: 5%;
-  color: #c4c4c4;
+  color: #fd7902;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
@@ -139,7 +139,7 @@
 }
 
 .button:hover {
-  background-color: #444444;
+  background-color: #fd7902;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }

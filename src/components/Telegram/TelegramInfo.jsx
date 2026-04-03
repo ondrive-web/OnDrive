@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import styles from './TelegramInfo.module.css';
 import { Send, Phone } from 'lucide-react';
 
-export default function TelegramNews() {
+const TelegramNews = () => {
   const { t } = useTranslation();
   const [scrollOffset, setScrollOffset] = useState(0);
   const sectionRef = useRef(null);
@@ -52,7 +52,7 @@ export default function TelegramNews() {
         <div className={styles.imageCol}>
           <div className={styles.floatingWrapper}>
             <img
-              src="/images/Дизайн без назви (25).webp"
+              src="/../../public/images/telegram/telegram-img.webp"
               alt={t('telegramNews.imageAlt')}
               className={styles.image}
             />
@@ -83,4 +83,6 @@ export default function TelegramNews() {
       </div>
     </section>
   );
-}
+};
+
+export default TelegramNews;

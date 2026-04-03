@@ -166,6 +166,16 @@
     }
   },
 
+  "telegramNews": {
+    "titleTelegram": "TELEGRAM",
+    "titleNews": "NEWS",
+    "subtitle": "THE MOST PROFITABLE AND VERIFIED LOTS FROM THE USA AND EUROPE IN OUR COMMUNITIES",
+    "description": "Every day we inform you about the best offers from US auctions. You will be up to date with all the fresh, profitable American and European cars. Thanks to this, you will be able to choose an excellent car at the lowest price!",
+    "btnViber": "Viber",
+    "btnTelegram": "Telegram",
+    "imageAlt": "Telegram News"
+  },
+
   "reviews": {
     "title": "Reviews ",
     "titleHighlight": "of our clients",

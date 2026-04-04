@@ -8,7 +8,6 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Проста і надійна перевірка скролу (без зникнення)
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -20,7 +19,6 @@ export default function Header() {
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    // Блокуємо скрол сторінки, коли відкрите меню
     document.body.style.overflow = !isMobileMenuOpen ? 'hidden' : 'unset';
   };
 

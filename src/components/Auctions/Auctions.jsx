@@ -5,12 +5,12 @@ import styles from './Auctions.module.css';
 export default function AuctionsSection() {
   const { t } = useTranslation();
 
-  const translations = t(`auctions.items`, { returnObjects: true });
+  const translations = t('auctions.items', { returnObjects: true });
 
   const data = Array.isArray(translations)
     ? auctionsData.map((item, index) => ({
         ...item,
-        ...translations[index],
+        ...(translations[index] || {}), // Фоллбек на випадок, якщо перекладів менше
       }))
     : [];
 
@@ -24,16 +24,17 @@ export default function AuctionsSection() {
         <div className={styles.grid}>
           {data.map((auction, index) => (
             <div
-              key={auction.id}
+              key={auction.id || index}
               className={styles.card}
               style={{ animationDelay: `${index * 0.2}s` }}
+              tabIndex="0" // Дозволяє фокусуватись на картці за допомогою клавіатури
             >
               <div className={styles.front}>
                 <img
                   src={auction.logo}
-                  alt={auction.name}
+                  alt={auction.name || 'Auction logo'}
                   className={styles.logo}
-                  loading="lazy"
+                  loading="lazy" // Ліниве завантаження картинок (вже було, і це супер)
                 />
               </div>
 

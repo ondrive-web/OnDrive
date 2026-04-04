@@ -23,7 +23,7 @@ const ContactButton = () => {
         </a>
 
         <a
-          href="https://t.me/Volodymyr_OnDrive"
+          href="https://t.me/runndrive_ua"
           target="_blank"
           rel="noreferrer"
           className={styles.link}

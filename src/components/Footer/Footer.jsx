@@ -131,10 +131,10 @@ const Footer = ({ id }) => {
                   <Mail size={16} />
                 </div>
                 <a
-                  href="mailto:ondrive.ua@gmail.com"
+                  href="mailto:runndrive.ua@gmail.com"
                   className={styles.contactLink}
                 >
-                  ondrive.ua@gmail.com
+                  runndrive.ua@gmail.com
                 </a>
               </li>
             </ul>

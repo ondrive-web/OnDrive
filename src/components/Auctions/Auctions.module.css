@@ -1,10 +1,6 @@
 .section {
   background-color: #f3f4f6;
   padding: 35px 20px;
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
 }
 
 .container {
@@ -52,10 +48,12 @@
   animation: fadeInUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px -5px rgba(253, 121, 2, 0.15);
   border-color: rgba(253, 121, 2, 0.3);
+  outline: none;
 }
 
 .front {
@@ -70,7 +68,8 @@
     transform 0.4s ease;
 }
 
-.card:hover .front {
+.card:hover .front,
+.card:focus .front {
   opacity: 0;
   transform: scale(0.9);
 }
@@ -103,7 +102,8 @@
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.card:hover .overlay {
+.card:hover .overlay,
+.card:focus .overlay {
   opacity: 1;
   transform: translateY(0);
 }
@@ -120,17 +120,6 @@
   color: #64748b;
   line-height: 1.6;
   margin-bottom: 20px;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 768px) {

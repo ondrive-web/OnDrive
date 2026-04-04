@@ -73,7 +73,7 @@ export default function BudgetSection() {
                   <p className={styles.desc}>{item.desc}</p>
 
                   <a
-                    href="https://t.me/Volodymyr_OnDrive"
+                    href="https://t.me/Volodymyr_runndrive"
                     className={styles.ctaButton}
                     target="_blank"
                     rel="noopener noreferrer"

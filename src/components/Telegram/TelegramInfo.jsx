@@ -52,7 +52,7 @@ const TelegramNews = () => {
         <div className={styles.imageCol}>
           <div className={styles.floatingWrapper}>
             <img
-              src="/../../public/images/telegram/telegram-img.webp"
+              src="/images/telegram/telegram-img.webp"
               alt={t('telegramNews.imageAlt')}
               className={styles.image}
             />
@@ -65,14 +65,24 @@ const TelegramNews = () => {
           <p className={styles.description}>{t('telegramNews.description')}</p>
 
           <div className={styles.buttonsWrapper}>
-            <a href="#viber" className={styles.button}>
+            <a
+              href="viber://chat?number=%2B380632161386"
+              className={styles.button}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className={`${styles.iconWrapper} ${styles.viberIconBg}`}>
                 <Phone size={20} color="white" strokeWidth={2} />
               </div>
               <span>{t('telegramNews.btnViber')}</span>
             </a>
 
-            <a href="#telegram" className={styles.button}>
+            <a
+              href="https://t.me/runndrive_ua"
+              className={styles.button}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className={`${styles.iconWrapper} ${styles.telegramIconBg}`}>
                 <Send size={20} color="white" strokeWidth={2} />
               </div>

@@ -1,10 +1,6 @@
 .switcherContainer {
   position: relative;
   display: inline-block;
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
 }
 
 .triggerButton {

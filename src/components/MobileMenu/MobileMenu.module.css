@@ -1,7 +1,20 @@
+/* Десктоп версія */
 .nav {
   display: flex;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: 24px;
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+.navLinksWrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.bottomActions {
+  display: flex;
+  gap: 16px;
 }
 
 .navLink {
@@ -31,53 +44,35 @@
 
 .phoneLink {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   font-weight: 600;
-
   padding: 10px 22px;
   border-radius: 50px;
   text-decoration: none;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
   transition: all 0.3s ease;
 }
 
 .phoneLink:hover {
   background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .ctaButton {
-  padding: 12px 30px;
+  padding: 10px 26px;
   background-color: #fd7902;
   color: #ffffff;
   border-radius: 50px;
-
   font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 0.4px;
   text-decoration: none;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
   transition: all 0.25s ease;
 }
 
 .ctaButton:hover {
   background-color: #ff8514;
-  box-shadow: 0 10px 20px rgba(253, 121, 2, 0.35);
   transform: translateY(-1px);
 }
 
+/* Мобільна версія */
 @media (max-width: 1024px) {
   .phoneLink {
     display: none;
@@ -87,79 +82,72 @@
 @media (max-width: 768px) {
   .nav {
     position: fixed;
-    top: 64px;
+    top: 0;
     left: 0;
-    right: 0;
-
-    background: rgba(20, 20, 20, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
     flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 
-    padding: 20px 16px;
-
-    transform: translateY(-20px);
     opacity: 0;
-    pointer-events: none;
-
+    visibility: hidden;
+    transform: translateY(-10px);
     transition:
-      opacity 0.25s ease,
-      transform 0.25s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+    z-index: 999; /* Під кнопкою бургера */
   }
 
   .nav.navOpen {
-    transform: translateY(0);
     opacity: 1;
-    pointer-events: auto;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navLinksWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .bottomActions {
+    flex-direction: column;
+    width: 80%;
+    max-width: 300px;
+    margin-top: 40px;
+    gap: 16px;
   }
 
   .navLink {
-    padding: 14px 0;
-    font-size: 1.1rem;
-    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
   }
 
   .navLink::after {
     display: none;
   }
 
-  .ctaButton {
-    width: 100%;
-    margin-top: 10px;
-    padding: 14px 0;
-    font-size: 16px;
-  }
-
   .phoneLink {
     display: flex;
     justify-content: center;
-    margin-top: 6px;
+    font-size: 1.2rem;
     padding: 14px 0;
-  }
-}
-
-@media (max-width: 375px) {
-  .nav {
-    padding: 16px 14px;
+    width: 100%;
   }
 
-  .navLink {
-    font-size: 1rem;
-  }
-}
-
-@media (hover: none) {
-  .navLink:hover::after {
-    width: 0;
-  }
-
-  .ctaButton:hover {
-    transform: none;
-    box-shadow: none;
-    background-color: #fd7902;
+  .ctaButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1.1rem;
   }
 }

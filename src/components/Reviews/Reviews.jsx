@@ -16,7 +16,8 @@ export default function Reviews() {
     ? reviews
         .map((item, index) => ({
           ...item,
-          ...translations[index],
+          // 1. ДОДАНО ФОЛЛБЕК || {} - рятує сайт від падіння
+          ...(translations[index] || {}),
         }))
         .slice(0, 6)
     : [];
@@ -52,13 +53,15 @@ export default function Reviews() {
                 <div className={styles.imageWrapper}>
                   <img
                     src={review.image}
-                    alt={review.name}
+                    alt={review.name || 'Review'}
                     className={styles.reviewImage}
+                    loading="lazy" // 3. Пришвидшує завантаження сайту
                   />
                 </div>
 
                 <div className={styles.stars}>
-                  {[...Array(review.rating)].map((_, i) => (
+                  {/* 2. ДОДАНО || 5 - рятує сайт від падіння */}
+                  {[...Array(review.rating || 5)].map((_, i) => (
                     <Star key={i} size={18} fill="#fd7902" stroke="#fd7902" />
                   ))}
                 </div>
@@ -66,7 +69,8 @@ export default function Reviews() {
                 <h3 className={styles.name}>{review.name}</h3>
 
                 <p className={styles.carModel}>
-                  <strong>Авто:</strong> {review.carModel}{' '}
+                  {/* Прибрано зайвий пробіл перед {t...} */}
+                  <strong>{t('reviews.auto')}:</strong> {review.carModel}
                 </p>
 
                 <p className={styles.reviewText}>{review.text}</p>

@@ -102,8 +102,39 @@
   font-size: clamp(1.1rem, 4vw, 1.3rem);
   font-weight: 700;
   line-height: 1.4;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block; /* Чтобы линия была по ширине текста */
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 4vw, 1.3rem);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.4;
   margin-bottom: 15px;
   text-transform: uppercase;
+
+  background: linear-gradient(270deg, #ffffff, #fd7902, #ffffff, #ffb370);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: liquidGradient 6s ease infinite;
+}
+
+@keyframes liquidGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .description {

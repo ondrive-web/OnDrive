@@ -145,32 +145,11 @@
     ]
   },
 
-  "telegram": {
-    "badge": "Live updates 24/7",
-    "title_start": "Catching lots that are",
-    "title_highlight": "missing from the market",
-    "description_start": "The best auction deals last only hours. In Telegram, we post hot",
-    "description_end": "lots, calculate turnkey prices, and show real savings.",
-    "benefits": {
-      "exclusive": "Exclusive selections from $10k",
-      "history": "Honest history (Carfax)",
-      "managers": "Chat with company managers"
-    },
-    "cta_button": "Join the channel",
-    "card": {
-      "notification": "+1 New car",
-      "sub_header": "Become part of our community",
-      "car_title": "Audi Q8 S-Line (2021)",
-      "bid_label": "Winning bid:",
-      "savings_label": "Savings:"
-    }
-  },
-
   "telegramNews": {
     "titleTelegram": "TELEGRAM",
     "titleNews": "NEWS",
-    "subtitle": "THE MOST PROFITABLE AND VERIFIED LOTS FROM THE USA AND EUROPE IN OUR COMMUNITIES",
-    "description": "Every day we inform you about the best offers from US auctions. You will be up to date with all the fresh, profitable American and European cars. Thanks to this, you will be able to choose an excellent car at the lowest price!",
+    "subtitle": "Auction navigator in your Viber and Telegram",
+    "description": "Get daily selections of the best lots with a detailed turnkey cost calculation and be the first to know about major changes in the car market.",
     "btnViber": "Viber",
     "btnTelegram": "Telegram",
     "imageAlt": "Telegram News"
@@ -179,6 +158,7 @@
   "reviews": {
     "title": "Reviews ",
     "titleHighlight": "of our clients",
+    "auto": "Auto",
     "items": [
       {
         "name": "Maksym",

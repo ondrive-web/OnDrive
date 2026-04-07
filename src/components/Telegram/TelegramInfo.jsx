@@ -66,7 +66,7 @@ const TelegramNews = () => {
 
           <div className={styles.buttonsWrapper}>
             <a
-              href="viber://chat?number=%2B380632161386"
+              href="https://invite.viber.com/?g2=AQBZ5vC0gk75m1ZZCDFjrJe9TUWpg1hOWYOPa%2BjdUj59vs9KfAjxYF7I7z%2BjBJqz"
               className={styles.button}
               target="_blank"
               rel="noopener noreferrer"

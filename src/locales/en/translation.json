@@ -1,7 +1,7 @@
 {
   "nav": {
     "about": "About us",
-    "steps": "Steps",
+    "steps": "Auctions",
     "referral": "Referral",
     "services": "Services",
     "contact": "Contact",
@@ -200,7 +200,7 @@
     "colContact": "Contact Us",
     "directions": {
       "usa": "Cars from USA",
-      "europe": "Cars from Europe",
+      "europe": "Cars from Canada",
       "korea": "Cars from Korea",
       "china": "Electric Vehicles"
     },

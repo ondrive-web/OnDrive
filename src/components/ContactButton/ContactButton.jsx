@@ -13,7 +13,7 @@ const ContactButton = () => {
     <div className={styles.wrapper}>
       <div className={`${styles.menu} ${isOpen ? styles.menuOpen : ''}`}>
         <a
-          href="viber://chat?number=%2B380632161386"
+          href="https://invite.viber.com/?g2=AQBZ5vC0gk75m1ZZCDFjrJe9TUWpg1hOWYOPa%2BjdUj59vs9KfAjxYF7I7z%2BjBJqz"
           target="_blank"
           className={styles.link}
           style={{ '--delay': '0s' }}

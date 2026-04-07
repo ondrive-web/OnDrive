@@ -1,6 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Instagram, Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import {
+  FaInstagram,
+  FaTelegramPlane,
+  FaTiktok,
+  FaViber,
+} from 'react-icons/fa';
 import styles from './Footer.module.css';
 
 const SocialLink = ({ href, icon, label }) => (
@@ -51,20 +57,30 @@ const Footer = ({ id }) => {
                 />
               </div>
               <span style={{ fontStyle: 'italic', fontWeight: '800' }}>
-                Run&Drive
+                RunNDrive
               </span>
             </div>
             <p className={styles.brandDesc}>{t('footer.description')}</p>
             <div className={styles.socialRow}>
               <SocialLink
-                href="https://instagram.com/your_profile"
-                icon={<Instagram size={20} />}
+                href="https://www.instagram.com/runndrive.ua/"
+                icon={<FaInstagram size={20} />}
                 label="Instagram"
               />
               <SocialLink
                 href="https://t.me/runndrive_ua"
-                icon={<Send size={20} />}
+                icon={<FaTelegramPlane size={20} />}
                 label="Telegram"
+              />
+              <SocialLink
+                href="https://www.tiktok.com/@runndrive.ua"
+                icon={<FaTiktok size={20} />}
+                label="TikTok"
+              />
+              <SocialLink
+                href="https://invite.viber.com/?g2=AQBZ5vC0gk75m1ZZCDFjrJe9TUWpg1hOWYOPa%2BjdUj59vs9KfAjxYF7I7z%2BjBJqz"
+                icon={<FaViber size={20} />}
+                label="Viber"
               />
             </div>
           </div>

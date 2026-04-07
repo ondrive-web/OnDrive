@@ -101,7 +101,7 @@ const Footer = ({ id }) => {
               <FooterLink href="#usa" target="_self">
                 {t('footer.directions.usa')}
               </FooterLink>
-              <FooterLink href="#europe" target="_self">
+              <FooterLink href="#canada" target="_self">
                 {t('footer.directions.europe')}
               </FooterLink>
               <FooterLink href="#korea" target="_self">

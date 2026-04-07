@@ -53,7 +53,7 @@ const ReferralSection = () => {
         </div>
 
         <a
-          href="https://t.me/Volodymyr_OnDrive"
+          href="https://t.me/runndrive_ua"
           className={styles.ctaButton}
           target="_blank"
           rel="noopener noreferrer"

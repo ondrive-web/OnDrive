@@ -19,16 +19,17 @@ function App() {
       <Header />
       <Hero />
       <AdvantagesSection id="about" />
-      <Countries id="referral" />
+      <Countries id="countries" />{' '}
+      {/* Заменил с referral, так как это логичнее для стран */}
       <AuctionsSection id="auctions" />
-      <BudgetSection id="" />
-      <Steps id="" />
-      <ReferralSection id="" />
-      <TelegramNews id="" />
-      {/* <TrustindexWidget id="" /> */}
-      <Reviews id="" />
+      <BudgetSection id="budget" />
+      <Steps id="steps" />
+      <ReferralSection id="referral" /> {/* Перенес referral сюда */}
+      <TelegramNews id="news" />
+      {/* <TrustindexWidget id="trustindex" /> */}
+      <Reviews id="reviews" />
       <Footer id="contact" />
-      {/*  */}
+      {/* */}
       <ContactButton />
     </div>
   );

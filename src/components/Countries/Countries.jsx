@@ -2,11 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { countriesData } from '../../data/CountriesSection';
 import styles from './Countries.module.css';
 
-export default function Countries() {
+export default function Countries({ id }) {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.section}>
+    <section id={id} className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.title}>{t('countries.title')}</h2>
 

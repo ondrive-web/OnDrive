@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import styles from './BudgetSection.module.css';
 import { budgetData } from '../../data/BudgetSection';
 
-export default function BudgetSection() {
+export default function BudgetSection({ id }) {
   const [activeTab, setActiveTab] = useState(0);
 
   const { t } = useTranslation();
@@ -20,7 +20,7 @@ export default function BudgetSection() {
   if (!data.length) return null;
 
   return (
-    <section className={styles.section}>
+    <section id={id} className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>

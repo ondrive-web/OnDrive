@@ -22,7 +22,7 @@ export default function MobileMenu({ isOpen, onNavClick }) {
 
       <div className={styles.bottomActions}>
         <a href="tel:+380632161386" className={styles.phoneLink}>
-          +38 (063) 216-13-87
+          +38 (063) 216-13-86
         </a>
 
         <a

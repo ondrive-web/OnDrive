@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import styles from './TelegramInfo.module.css';
 import { Send, Phone } from 'lucide-react';
 
-const TelegramNews = () => {
+const TelegramNews = ({ id }) => {
   const { t } = useTranslation();
   const [scrollOffset, setScrollOffset] = useState(0);
   const sectionRef = useRef(null);
@@ -32,7 +32,7 @@ const TelegramNews = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className={styles.section}>
+    <section id={id} ref={sectionRef} className={styles.section}>
       <div className={styles.animatedTitles}>
         <h1
           className={styles.telegramText}

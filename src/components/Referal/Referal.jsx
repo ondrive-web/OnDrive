@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import styles from './ReferralSection.module.css';
 import { tiersData } from '../../data/TiersData';
 
-const ReferralSection = () => {
+const ReferralSection = ({ id }) => {
   const { t } = useTranslation();
   const translations = t('referral.items', { returnObjects: true });
 
@@ -16,7 +16,7 @@ const ReferralSection = () => {
   if (!data.length) return null;
 
   return (
-    <section className={styles.section}>
+    <section id={id} className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>

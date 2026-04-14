@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { auctionsData } from '../../data/AuctionsSection.jsx';
 import styles from './Auctions.module.css';
 
-export default function AuctionsSection() {
+export default function AuctionsSection({ id }) {
   const { t } = useTranslation();
 
   const translations = t('auctions.items', { returnObjects: true });
@@ -12,7 +12,7 @@ export default function AuctionsSection() {
   if (!auctionsData || auctionsData.length === 0) return null;
 
   return (
-    <section className={styles.section}>
+    <section id={id} className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.title}>{t('auctions.title', 'Аукциони')}</h2>
 

@@ -98,16 +98,16 @@ const Footer = ({ id }) => {
           <div>
             <h4 className={styles.columnTitle}>{t('footer.colDirections')}</h4>
             <ul className={styles.linkList}>
-              <FooterLink href="#usa" target="_self">
+              <FooterLink href="#countries" target="_self">
                 {t('footer.directions.usa')}
               </FooterLink>
-              <FooterLink href="#canada" target="_self">
-                {t('footer.directions.europe')}
+              <FooterLink href="#countries" target="_self">
+                {t('footer.directions.canada')}
               </FooterLink>
-              <FooterLink href="#korea" target="_self">
+              <FooterLink href="#countries" target="_self">
                 {t('footer.directions.korea')}
               </FooterLink>
-              <FooterLink href="#china" target="_self">
+              <FooterLink href="#countries" target="_self">
                 {t('footer.directions.china')}
               </FooterLink>
             </ul>

@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import styles from './Steps.module.css';
 
-export default function Steps() {
+export default function Steps({ id }) {
   const { t } = useTranslation();
 
   const listItems = t('steps.list', { returnObjects: true });
 
   return (
-    <section className={styles.section}>
+    <section id={id} className={styles.section}>
       <div className={styles.container}>
         <div className={styles.content}>
           <h2 className={styles.title}>

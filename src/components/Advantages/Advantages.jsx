@@ -25,7 +25,6 @@ const AdvantagesSection = ({ id }) => {
             <div
               key={index}
               className={styles.cardWrapper}
-              style={{ top: `${stickyTop}px` }}
             >
               <div className={styles.card}>
                 <div className={styles.cardHeader}>

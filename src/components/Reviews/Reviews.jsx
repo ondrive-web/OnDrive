@@ -16,7 +16,6 @@ export default function Reviews() {
     ? reviews
         .map((item, index) => ({
           ...item,
-          // 1. ДОДАНО ФОЛЛБЕК || {} - рятує сайт від падіння
           ...(translations[index] || {}),
         }))
         .slice(0, 6)
@@ -34,50 +33,55 @@ export default function Reviews() {
           </span>
         </h2>
 
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          pagination={{ clickable: true, dynamicBullets: true }}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className={styles.swiperContainer}
-        >
-          {allReviews.map(review => (
-            <SwiperSlide key={review.id} className={styles.slide}>
-              <div className={styles.card}>
-                <div className={styles.imageWrapper}>
-                  <img
-                    src={review.image}
-                    alt={review.name || 'Review'}
-                    className={styles.reviewImage}
-                    loading="lazy" // 3. Пришвидшує завантаження сайту
-                  />
+        <div className={styles.swiperWrapper}>
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={{ clickable: true, dynamicBullets: true }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            breakpoints={{
+              640: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 25 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
+            }}
+            grabCursor={true}
+            watchSlidesProgress={true}
+            observer={true}
+            observeParents={true}
+            autoHeight={false}
+            className={styles.swiperContainer}
+          >
+            {allReviews.map(review => (
+              <SwiperSlide key={review.id} className={styles.slide}>
+                <div className={styles.card}>
+                  <div className={styles.imageWrapper}>
+                    <img
+                      src={review.image}
+                      alt={review.name || 'Review'}
+                      className={styles.reviewImage}
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div className={styles.stars}>
+                    {[...Array(review.rating || 5)].map((_, i) => (
+                      <Star key={i} size={18} fill="#fd7902" stroke="#fd7902" />
+                    ))}
+                  </div>
+
+                  <h3 className={styles.name}>{review.name}</h3>
+
+                  <p className={styles.carModel}>
+                    <strong>{t('reviews.auto')}:</strong> {review.carModel}
+                  </p>
+
+                  <p className={styles.reviewText}>{review.text}</p>
                 </div>
-
-                <div className={styles.stars}>
-                  {/* 2. ДОДАНО || 5 - рятує сайт від падіння */}
-                  {[...Array(review.rating || 5)].map((_, i) => (
-                    <Star key={i} size={18} fill="#fd7902" stroke="#fd7902" />
-                  ))}
-                </div>
-
-                <h3 className={styles.name}>{review.name}</h3>
-
-                <p className={styles.carModel}>
-                  {/* Прибрано зайвий пробіл перед {t...} */}
-                  <strong>{t('reviews.auto')}:</strong> {review.carModel}
-                </p>
-
-                <p className={styles.reviewText}>{review.text}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );

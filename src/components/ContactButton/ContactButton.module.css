@@ -7,6 +7,15 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+:global(.menu-open) .wrapper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .mainButton {

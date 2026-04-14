@@ -18,13 +18,20 @@ export default function Header() {
   }, []);
 
   const toggleMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    document.body.style.overflow = !isMobileMenuOpen ? 'hidden' : 'unset';
+    const nextState = !isMobileMenuOpen;
+    setIsMobileMenuOpen(nextState);
+    document.body.style.overflow = nextState ? 'hidden' : 'unset';
+    if (nextState) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
   };
 
   const closeMenu = () => {
     setIsMobileMenuOpen(false);
     document.body.style.overflow = 'unset';
+    document.body.classList.remove('menu-open');
   };
 
   return (
